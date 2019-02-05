@@ -1,0 +1,89 @@
+# -------------------------------
+# Malwarebytes AdwCleaner 7.2.7.0
+# -------------------------------
+# Build:    01-30-2019
+# Database: 2019-01-25.2 (Cloud)
+# Support:  https://www.malwarebytes.com/support
+#
+# -------------------------------
+# Mode: Clean
+# -------------------------------
+# Start:    01-31-2019
+# Duration: 00:00:06
+# OS:       Windows 10 Pro
+# Cleaned:  1
+# Failed:   1
+
+
+***** [ Services ] *****
+
+No malicious services cleaned.
+
+***** [ Folders ] *****
+
+Deleted       C:\Windows\rss
+
+***** [ Files ] *****
+
+Not Deleted   C:\Windows\System32\drivers\WinmonFS.sys
+
+***** [ DLL ] *****
+
+No malicious DLLs cleaned.
+
+***** [ WMI ] *****
+
+No malicious WMI cleaned.
+
+***** [ Shortcuts ] *****
+
+No malicious shortcuts cleaned.
+
+***** [ Tasks ] *****
+
+No malicious tasks cleaned.
+
+***** [ Registry ] *****
+
+No malicious registry entries cleaned.
+
+***** [ Chromium (and derivatives) ] *****
+
+No malicious Chromium entries cleaned.
+
+***** [ Chromium URLs ] *****
+
+No malicious Chromium URLs cleaned.
+
+***** [ Firefox (and derivatives) ] *****
+
+No malicious Firefox entries cleaned.
+
+***** [ Firefox URLs ] *****
+
+No malicious Firefox URLs cleaned.
+
+
+*************************
+
+[+] Delete IFEO
+[+] Delete Prefetch
+[+] Delete Tracing Keys
+[+] Reset BITS
+[+] Reset Windows Firewall
+[+] Reset Hosts File
+[+] Reset IPSec
+[+] Reset Chromium Policies
+[+] Reset IE Policies
+[+] Reset Proxy Settings
+[+] Reset TCP/IP
+[+] Reset Winsock
+
+*************************
+
+AdwCleaner[S00].txt - [4807 octets] - [31/01/2019 09:42:32]
+AdwCleaner[C00].txt - [4245 octets] - [31/01/2019 09:42:48]
+AdwCleaner_Debug.log - [10533 octets] - [31/01/2019 09:46:24]
+AdwCleaner[S01].txt - [1499 octets] - [31/01/2019 09:49:05]
+
+########## EOF - C:\AdwCleaner\Logs\AdwCleaner[C01].txt ##########

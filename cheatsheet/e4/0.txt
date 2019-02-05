@@ -1,0 +1,47 @@
+git remote set-url --add --push [remote] [original repo URL]
+git remote set-url --add --push [remote] [second repo URL]
+
+git remote set-url --add --push origin https://github.com/oneplus-x/airgeddon.git
+git remote set-url --add --push origin https://github.com/oneplus-x/fluxion.git
+
+git config --global user.name "one-plus"
+git config --global user.email forever8124@gmail.com
+
+echo "# WebShell-Collections" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/oneplus-x/airgeddon.git
+
+git checkout -- WebShell-Collections/fuzzdb/
+git push -u origin master
+git push -f origin master
+
+git checkout master
+git rm -r folder-name
+git commit -m "Remove duplicated directory"
+git push origin master
+
+git checkout -- path
+git checkout "<deleting_commit>^" -- <file_path>
+git checkout -- removed_directory
+git reset --hard HEAD
+
+echo "# git-remote-add-origin-https-drive.google.com-drive-folders-1M-VASKAlEpekmDpstxrKsUEg0AgP5b9D-ogsrc" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/oneplus-x/git-remote-add-origin-https-drive.google.com-drive-folders-1M-VASKAlEpekmDpstxrKsUEg0AgP5b9D-ogsrc.git
+git push -u origin master
+
+echo "# git-remote-add-origin-https-drive.google.com-drive-folders-1M-VASKAlEpekmDpstxrKsUEg0AgP5b9D-ogsrc" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/oneplus-x/git-remote-add-origin-https-drive.google.com-drive-folders-1M-VASKAlEpekmDpstxrKsUEg0AgP5b9D-ogsrc.git
+git push -u origin master
+
+https://drive.google.com/drive/folders/1M/VASKAlEpekmDpstxrKsUEg0AgP5b9D-ogsrc
+https://bitbucket.org/oneplus-x/
+https://sourceforge.net/u/oneplus/profile
+https://onepluscommunity.slack.com

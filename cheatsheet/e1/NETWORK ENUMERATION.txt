@@ -1,0 +1,45 @@
+NETWORK ENUMERATION
+NTP Suite
+$ ntpdate 192.168.1.100
+
+enum4linux
+$ enum4linux -U -o 192.168.1.100
+
+smtp-user-enum
+$ smtp-user-enum -M VRFY -u root -t 192.168.1.100
+
+HIDE YOUR IP USING TORPHANTOM
+# git clone https://github.com/3ndG4me/torphantom
+$ cd torphantom
+
+LINUX:
+
+Debian/Ubuntu:
+$ cd Linux
+$ chmod +x install.sh
+$ ./install.sh
+
+Arch:
+$ cd Linux
+$ chmod +x install-pac.sh
+$ ./install-pac.sh
+
+RHEL/CentOS/Fedora:
+$ cd Linux
+$ chmod +x install-rpm.sh
+$ ./install-rpm.sh
+
+MAC OS:
+Install Mac Ports
+$ cd macOS
+$ chmod +x install.sh
+$ ./install.sh
+
+INITIALIZE TOR SESSION
+Start Torphantom
+$ sudo torphantom start -i
+
+Stop Torphantom
+$ sudo torphantom stop
+
+https://youtu.be/WSu_wPoahq0

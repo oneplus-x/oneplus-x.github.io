@@ -1,0 +1,11 @@
+sitemap.xml filetype:xml intext:"cgi-bin"
+filetype:sh inurl:cgi-bin
+filetype:sh
+intext:cgi-bin
+intitle:apache "cgi-bin"
+inurl:cgi-bin
+inurl:wspd_cgi.sh
+inurl:wslb.sh
+inurl:"server-status" intitle:apache "cgi-bin"
+inurl:cgi-bin "GATEWAY_INTERFACE = CGI"
+inurl:cgi-bin inurl:printenv intext:SERVER_ADDR

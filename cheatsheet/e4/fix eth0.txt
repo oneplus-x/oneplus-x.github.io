@@ -1,0 +1,13 @@
+sudo ifconfig eth0 192.168.100.16
+sudo ifconfig eth0 netmask 255.255.255.0
+sudo ifconfig eth0 broadcast 192.168.100.1
+sudo ifconfig eth0 192.168.100.16 netmask 255.255.255.0 broadcast 192.168.100.1
+sudo ifconfig eth0 down
+sudo ifconfig eth0 up
+sudo ifconfig eth0 mtu 1480
+sudo ifconfig eth0 promisc
+sudo ifconfig eth0 -promisc
+
+sudo nano /etc/network/interfaces
+sudo nano /etc/NetworkManager/NetworkManager.conf
+sudo service network-manager restart

@@ -1,0 +1,19 @@
+EXPLAIN IP ADDRESSES
+DIG COMMAND
+# Type the below commands
+$ dig +short myip.opendns.com @resolver1.opendns.com
+OR
+# Type the below commands
+$ dig TXT +short o-o.myaddr.l.google.com @ns1.google.com
+
+STORE IP IN A SHELL VARIABLE
+Syntax
+myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+echo "My WAN/Public IP address: ${myip}"
+
+USE 3RD PARTY WEBSITES
+# Type the below commands
+$ curl ifconfig.me
+$ curl icanhazip.com
+$ curl ipecho.net/plain
+$ curl ifconfig.co

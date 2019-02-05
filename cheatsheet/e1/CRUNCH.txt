@@ -1,0 +1,9 @@
+crunch <min> <max> <characterset> -t <pattern> -o <output filename>
+man crunch
+-f /path/to/charset.lst <charactersetname>
+/usr/share/rainbowcrack/charset.lst
+crunch 4 8
+crunch 6 8 1234567890 -o /root/numericwordlist.lst
+crunch 10 10 -t @@@@@@0728 -o /root/birthdaywordlist.lst
+/usr/share/rainbowcrack/charset.txt
+crunch 8 8 -f /usr/share/rainbowcrack/charset.txt mixalpha -o /root/alphawordlist.lst

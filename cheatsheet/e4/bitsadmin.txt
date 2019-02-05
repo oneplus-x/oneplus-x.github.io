@@ -1,0 +1,1 @@
+bitsadmin /transfer wcb /priority high http://example.com/examplefile.pdf C:\downloads\examplefile.pdf

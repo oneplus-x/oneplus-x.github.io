@@ -676,50 +676,17 @@ video {
   height: auto;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+var slideIndex = 0;
+carousel();
 
-.flip-box {
-
-background-color: transparent;
-border: 1px solid #f1f1f1;
-perspective: 1000px;
-}
-.flip-box-inner {
-position: relative;
-text-align: center;
-transition: transform 0.8s;
-transform-style: preserve-3d;
-}
-.flip-box:hover .flip-box-inner {
- transform: rotateX(180deg);
-}
-.flip-box-front, .flip-box-back {
-position: absolute;
-backface-visibility: hidden;
-}
-
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-box-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateX(180deg);
-}
-
-.flip-box-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-.flip-box:hover .flip-box-inner {
-  transform: rotateX(180deg);
-}
-
-.flip-box-back {
-  transform: rotateX(180deg);
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 2000); // Change image every 2 seconds
 }

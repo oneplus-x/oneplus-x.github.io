@@ -8,16 +8,38 @@ video {
   height: auto;
 }
 
-/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-box {
-  background-color: transparent;
-  width: 100px;
-  height: 100%;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
 }
 
-/* This container is needed to position the front and back side */
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
 .flip-box-inner {
   position: relative;
   width: 100%;
@@ -27,12 +49,10 @@ video {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
-/* Position the front and back side */
 .flip-box-front, .flip-box-back {
   position: absolute;
   width: 100%;
@@ -40,13 +60,17 @@ video {
   backface-visibility: hidden;
 }
 
-/* Style the front side */
 .flip-box-front {
   background-color: #bbb;
   color: black;
 }
 
-/* Style the back side */
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateX(180deg);
+}
+
 .flip-box-back {
   background-color: dodgerblue;
   color: white;

@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Description-->
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/844862781522292738/OOggykFZ.jpg" type="image/x-icon" /> <link rel="icon" href="https://pbs.twimg.com/profile_images/844862781522292738/OOggykFZ.jpg" type="image/x-icon" /> <!--Description-->
     
-        <meta name="description" content="Let us discuss your security">
+        <meta name="description" content="Life isn't fucking easy">
     
 
     <!--Author-->
@@ -25,7 +25,7 @@
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="Let us discuss your security" />
+        <meta property="og:description" content="Life isn't fucking easy" />
     
 
     <!--Open Graph Site Name-->
@@ -61,9 +61,11 @@
 
     <!-- Gallery -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
-
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/gallery/assets/styles.css">
+	<script src="/gallery/assets/min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81899858-1"></script>
 <script type="text/javascript">  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -158,7 +160,7 @@
         <!--Title and Logo-->
         <header>
     <div class="logo">
-        <a href="/"><i class="logo-icon fa fa-code" aria-hidden="true"></i></a>
+        <a href="/"><i class="logo-icon fa fa-bug" aria-hidden="true"></i></a>
     </div>
 </header>
 
@@ -172,6 +174,7 @@
               Gallery
             </a>
         </h1>
+
         <div class="post-info">
 
                 <span class="date">2017-03-09</span>
@@ -184,16 +187,78 @@
     <div class="content">
 
         <!-- Gallery -->
-        
+        <div class="gallery">
+  <a target="_blank" href="/Camera Roll/image (1).jpg">
+    <img src="/Camera Roll/image (1).jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
 
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
         <!-- Post Content -->
-        
+<h1>Compare Two Images</h1>
+
+<p>Click and slide the blue slider to compare two images:</p>
+
+<div class="img-comp-container">
+  <div class="img-comp-img">
+    <img src="/Camera Roll/image (1).jpg" width="300" height="200">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="/Camera Roll/image (2).jpg" width="300" height="200">
+  </div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="/Camera Roll/image (1).jpg">
+    <img src="/Camera Roll/image (1).jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="/Camera Roll/image (2).jpg">
+    <img src="/Camera Roll/image (2).jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<script>
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+</script>	
     </div>
-
-    
-
-    
-
     <!-- Comments -->
     
     <div class="comments">

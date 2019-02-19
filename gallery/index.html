@@ -64,7 +64,9 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css">
-	
+<style>
+.mySlides {display:none;}
+</style>
 	
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81899858-1"></script>
@@ -84,7 +86,7 @@
 </script>
 
     <!-- Google Adsense -->
- 
+
  
 </head>
 
@@ -189,18 +191,30 @@
 
         <!-- Gallery -->
 <div class="gallery">
-<div class="flip-box">
-<div class="flip-box-inner">
-<div class="flip-box-front">
-<a target="_blank" href="/gallery/Camera Roll/image (1).jpg">
-<img src="/gallery/Camera Roll/image (1).jpg" alt="Cinque Terre" width="600" height="400"></a>
+<h2 class="w3-center">Automatic Slideshow</h2>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="/gallery/Camera Roll/image (16).jpg" style="width:100%">
+  <img class="mySlides" src="/gallery/Camera Roll/image (15).jpg" style="width:100%">
+  <img class="mySlides" src="/gallery/Camera Roll/image (15).jpg" style="width:100%">
 </div>
-<div class="flip-box-back">
-<a target="_blank" href="/gallery/Camera Roll/image (16).jpg">
-<img src="/gallery/Camera Roll/image (16).jpg" alt="Cinque Terre" width="600" height="400"></a>
-</div>
-</div>
-</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 </div>
 </div>
         <!-- Post Content -->
